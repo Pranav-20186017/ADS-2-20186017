@@ -18,9 +18,9 @@ Haryana: Gujarat Delhi
 Your Output: 
 Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$ListIterator.<init>(LBag;)V from class Bag
 	at Bag.iterator(Bag.java:83)
-	at AdjacencyList.hasEdge(Solution.java:112)
-	at AdjacencyList.addEdge(Solution.java:97)
-	at Solution.main(Solution.java:282)
+	at AdjacencyList.hasEdge(Solution.java:116)
+	at AdjacencyList.addEdge(Solution.java:101)
+	at Solution.main(Solution.java:286)
 ----------------------------------------
 
 ########## Testcase 1: Passed ##########
@@ -100,9 +100,9 @@ West Bengal: Uttar Pradesh Bihar
 Your Output: 
 Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$ListIterator.<init>(LBag;)V from class Bag
 	at Bag.iterator(Bag.java:83)
-	at AdjacencyList.hasEdge(Solution.java:112)
-	at AdjacencyList.addEdge(Solution.java:97)
-	at Solution.main(Solution.java:282)
+	at AdjacencyList.hasEdge(Solution.java:116)
+	at AdjacencyList.addEdge(Solution.java:101)
+	at Solution.main(Solution.java:286)
 ----------------------------------------
 
 ########## Testcase 3: Passed ##########
@@ -193,8 +193,8 @@ No edges
 Your Output: 
 Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
 	at Bag.add(Bag.java:70)
-	at AdjacencyList.addEdge(Solution.java:100)
-	at Solution.main(Solution.java:282)
+	at AdjacencyList.addEdge(Solution.java:104)
+	at Solution.main(Solution.java:286)
 ----------------------------------------
 
 ########## Testcase 5: Passed ##########
