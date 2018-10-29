@@ -3,11 +3,11 @@ import java.util.Scanner;
  * Interface for graph.
  */
 interface Graph {
-    public int V();
-    public int E();
-    public void addEdge(int v, int w);
-    public Iterable<Integer> adj(int v);
-    public boolean hasEdge(int v, int w);
+    int V();
+    int E();
+    void addEdge(int v, int w);
+    Iterable<Integer> adj(int v);
+    boolean hasEdge(int v, int w);
 }
 class AdjacencyList implements Graph {
     Bag<Integer>[] bags;

@@ -44,17 +44,12 @@ Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:6:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:6:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:6:9: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:7:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:7:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:7:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:7:9: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:8:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:8:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:9:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:9:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:10:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:10:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:12: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:13:17: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:13:20: Variable 'bags' must be private and have accessor methods. [VisibilityModifier]
@@ -103,4 +98,4 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:127: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:147: Line is longer than 80 characters (found 90). [LineLength]
 Audit done.
-Checkstyle ends with 60 errors.
+Checkstyle ends with 55 errors.
