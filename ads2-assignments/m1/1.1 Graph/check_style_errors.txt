@@ -93,9 +93,6 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:109:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:110:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:110:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:116: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:122: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:127: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:147: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m1\1.1 Graph\Solution.java:123: switch without "default" clause. [MissingSwitchDefault]
 Audit done.
-Checkstyle ends with 55 errors.
+Checkstyle ends with 52 errors.

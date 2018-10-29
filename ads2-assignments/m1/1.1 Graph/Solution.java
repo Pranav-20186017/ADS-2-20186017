@@ -113,7 +113,8 @@ class Solution {
         int vertexnum = Integer.parseInt(scan.nextLine());
         int edgenum = Integer.parseInt(scan.nextLine());
         String[] placenames = scan.nextLine().split(",");
-        SeparateChainingHashST<Integer, String> schsobj = new SeparateChainingHashST<>();
+        SeparateChainingHashST<Integer, String> schsobj
+        = new SeparateChainingHashST<>();
         int count = 0;
         for (String eachname : placenames) {
             schsobj.put(count, eachname);
@@ -121,13 +122,14 @@ class Solution {
         }
         switch (lineone) {
         case "List":
-            AdjacencyList listobj = new AdjacencyList(vertexnum);
+            AdjacencyList listobj
+            = new AdjacencyList(vertexnum);
             for (int k = 0; k < edgenum; k++) {
                 String[] edges = scan.nextLine().split(" ");
-                listobj.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]));
+                listobj.addEdge(Integer.parseInt(edges[0]),
+                    Integer.parseInt(edges[1]));
             }
             listobj.toString();
-
             for (int j = 0; j < vertexnum; j++) {
                 String str = "";
                 if (listobj.E() == 0) {
@@ -141,10 +143,12 @@ class Solution {
             }
             break;
         case "Matrix":
-            AdjacencyMatrix matrixobj = new AdjacencyMatrix(vertexnum);
+            AdjacencyMatrix matrixobj
+            = new AdjacencyMatrix(vertexnum);
             for (int i = 0; i < edgenum; i++) {
                 String[] edges = scan.nextLine().split(" ");
-                matrixobj.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]));
+                matrixobj.addEdge(Integer.parseInt(edges[0]),
+                    Integer.parseInt(edges[1]));
             }
             matrixobj.toString();
             break;
