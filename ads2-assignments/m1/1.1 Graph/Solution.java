@@ -1,7 +1,3 @@
-/**
- * @author : Pranay Kuamr Y.
- * Date : 29th October,2018.
- */
 import java.util.Scanner;
 /**
  * Interface for graph.
