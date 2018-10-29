@@ -1,3 +1,4 @@
+
 /**
  * Class for sequential search st.
  *
@@ -204,4 +205,19 @@ class SequentialSearchST<Key, Value> {
         }
         return queue;
     }
+    // /**
+    //  * Unit tests the {@code SequentialSearchST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     SequentialSearchST<String, Integer> st =
+    //     new SequentialSearchST<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+    //     for (String s : st.keys())
+    //         StdOut.println(s + " " + st.get(s));
+    // }
 }

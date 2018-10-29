@@ -236,4 +236,23 @@ class SeparateChainingHashST<Key, Value> {
         }
         return queue;
     }
+    // /**
+    //  * Unit tests the {@code SeparateChainingHashST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     SeparateChainingHashST<String, Integer> st =
+    //     new SeparateChainingHashST<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+
+    //     // print keys
+    //     for (String s : st.keys())
+    //         StdOut.println(s + " " + st.get(s));
+
+    // }
+
 }
