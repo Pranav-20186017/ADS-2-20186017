@@ -1,0 +1,18 @@
+warning: LF will be replaced by CRLF in ads2-assignments/m1/1.1 Graph/Bag.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m1/1.1 Graph/Queue.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m1/1.1 Graph/Solution.java.
+The file will have its original line endings in your working directory.
+[master 7f7c146] "ads2_m1_a1_1: 8/8 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 10 files changed, 64 insertions(+), 18 deletions(-)
+ rewrite ads2-assignments/m1/1.1 Graph/Bag$ListIterator.class (80%)
+ rewrite ads2-assignments/m1/1.1 Graph/Bag$Node.class (78%)
+ rewrite ads2-assignments/m1/1.1 Graph/Bag.class (81%)
+ rewrite ads2-assignments/m1/1.1 Graph/Queue$ListIterator.class (98%)
+ rewrite ads2-assignments/m1/1.1 Graph/Queue$Node.class (81%)
+ rewrite ads2-assignments/m1/1.1 Graph/Queue.class (98%)
+ rewrite ads2-assignments/m1/1.1 Graph/result/score.json (81%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   04a6060..7f7c146  master -> master
