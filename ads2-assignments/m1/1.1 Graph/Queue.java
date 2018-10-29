@@ -1,5 +1,4 @@
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 /**
  * Queue class for list of items.
  *

@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 interface Graph {
     /**
-     * { function for number of vertices }.
+     * no of vertices.
      *
      * @return     { description_of_the_return_value }
      */
