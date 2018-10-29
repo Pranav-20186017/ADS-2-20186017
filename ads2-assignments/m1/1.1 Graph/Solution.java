@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 interface Graph {
     public int V();
@@ -7,65 +6,145 @@ interface Graph {
     public Iterable<Integer> adj(int v);
     public boolean hasEdge(int v, int w);
 }
-class Matrix implements Graph {
-    int vertices;
-    int edges;
-    int[][] matrix;
-    Matrix(int v, int e) {
-        this.vertices = v;
-        this.edges = 0;
-        matrix = new int[v][v];
+class AdjacencyList implements Graph {
+    Bag<Integer>[] bags;
+    private int vertexval;
+    private int edgenum;
+    AdjacencyList(int vertex) {
+        this.vertexval = vertex;
+        bags = (Bag<Integer>[]) new Bag[vertex];
+        for (int l = 0; l < vertex; l++) {
+            bags[l] = new Bag();
+        }
+        this.edgenum = 0;
     }
     public int V() {
-        return vertices;
+        return this.vertexval;
     }
     public int E() {
-        return edges;
+        return this.edgenum;
     }
     public void addEdge(int v, int w) {
-        if (v != w && !hasEdge(v, w)) {
-            matrix[v][w] = 1;
-            matrix[w][v] = 1;
-            edges++;
+        if (v == w || hasEdge(v, w)) {
+            return;
         }
-
+        bags[v].add(w);
+        bags[w].add(v);
+        edgenum++;
+    }
+    public boolean hasEdge(int v, int w) {
+        for (Integer eachval : bags[v]) {
+            if (eachval == w) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public Iterable<Integer> adj(int v) {
+        Queue<Integer> queue = new Queue<>();
+        for (Integer eachval : bags[v]) {
+            queue.enqueue(eachval);
+        }
+        return queue;
+    }
+    public String toString() {
+        if (edgenum == 0) {
+            System.out.println(vertexval + " vertices, " + edgenum + " edges");
+            System.out.println("No edges");
+            return null;
+        }
+        System.out.println(vertexval + " vertices, " + edgenum + " edges");
+        return null;
+    }
+}
+class AdjacencyMatrix implements Graph {
+    private int edgenum;
+    private int[][] adjmatrix;
+    private int vertexval;
+    AdjacencyMatrix(int vertex) {
+        this.vertexval = vertex;
+        adjmatrix = new int[vertex][vertex];
+        this.edgenum = 0;
+    }
+    public int V() {
+        return this.vertexval;
+    }
+    public int E() {
+        return this.edgenum;
+    }
+    public void addEdge(int v, int w) {
+        if (v == w || hasEdge(v, w)) {
+            return;
+        }
+        adjmatrix[v][w] = 1;
+        adjmatrix[w][v] = 1;
+        edgenum++;
+    }
+    public boolean hasEdge(int v, int w) {
+        return adjmatrix[v][w] == 1;
     }
     public Iterable<Integer> adj(int v) {
         return null;
     }
-    public boolean hasEdge(int v, int w) {
-        return matrix[v][w] == 1;
+    public String toString() {
+        if (edgenum == 0) {
+            System.out.println(vertexval + " vertices, " + edgenum + " edges");
+            System.out.println("No edges");
+            return null;
+        }
+        System.out.println(vertexval + " vertices, " + edgenum + " edges");
+        for (int i = 0; i < vertexval; i++) {
+            String str = "";
+            for (int j = 0; j < vertexval; j++) {
+                str = str + adjmatrix[i][j] + " ";
+            }
+            System.out.println(str);
+        }
+        return null;
     }
 }
-public class Solution {
+class Solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String adjacency = scan.nextLine();
-        int vertices = Integer.parseInt(scan.nextLine());
-        int edges = Integer.parseInt(scan.nextLine());
-        switch (adjacency) {
-        case "List" :
-            break;
-        case "Matrix" :
-            Matrix matrix = new Matrix(vertices, edges);
-            String[] elements = scan.nextLine().split(",");
-            while (scan.hasNext()) {
-                String[] edge = scan.nextLine().split(" ");
-                matrix.addEdge(Integer.parseInt(edge[0]), Integer.parseInt(edge[1]));
+        String lineone = scan.nextLine();
+        int vertexnum = Integer.parseInt(scan.nextLine());
+        int edgenum = Integer.parseInt(scan.nextLine());
+        String[] placenames = scan.nextLine().split(",");
+        SeparateChainingHashST<Integer, String> schsobj = new SeparateChainingHashST<>();
+        int count = 0;
+        for (String eachname : placenames) {
+            schsobj.put(count, eachname);
+            count++;
+        }
+        switch (lineone) {
+        case "List":
+            AdjacencyList listobj = new AdjacencyList(vertexnum);
+            for (int k = 0; k < edgenum; k++) {
+                String[] edges = scan.nextLine().split(" ");
+                listobj.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]));
             }
-            System.out.println(matrix.vertices + " vertices, " + matrix.edges + " edges");
-            if (matrix.vertices <= 1 || matrix.edges <= 1) {
-                System.out.println("No edges");
-                return;
-            }
-            for (int i = 0; i < vertices; i++) {
-                for (int j = 0; j < vertices; j++) {
-                    System.out.print(matrix.matrix[i][j]  + " ");
+            listobj.toString();
+
+            for (int j = 0; j < vertexnum; j++) {
+                String str = "";
+                if (listobj.E() == 0) {
+                    break;
                 }
-                System.out.println();
+                str = str + schsobj.get(j) + ": ";
+                for (Integer each : listobj.adj(j)) {
+                    str = str + schsobj.get(each) + " ";
+                }
+                System.out.println(str);
             }
             break;
-        default:
+        case "Matrix":
+            AdjacencyMatrix matrixobj = new AdjacencyMatrix(vertexnum);
+            for (int i = 0; i < edgenum; i++) {
+                String[] edges = scan.nextLine().split(" ");
+                matrixobj.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[1]));
+            }
+            matrixobj.toString();
+            break;
         }
     }
 }
