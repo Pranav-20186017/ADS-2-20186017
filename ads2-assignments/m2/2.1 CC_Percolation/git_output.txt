@@ -1,0 +1,12 @@
+warning: LF will be replaced by CRLF in ads2-assignments/m2/2.1 CC_Percolation/Solution.java.
+The file will have its original line endings in your working directory.
+[master 1dd18fd] "ads2_m2_a1_1: 24/24 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 10 files changed, 196 insertions(+), 290 deletions(-)
+ rewrite ads2-assignments/m2/2.1 CC_Percolation/Bag$ListIterator.class (78%)
+ rewrite ads2-assignments/m2/2.1 CC_Percolation/Bag$Node.class (78%)
+ rewrite ads2-assignments/m2/2.1 CC_Percolation/Bag.class (81%)
+ rewrite ads2-assignments/m2/2.1 CC_Percolation/result/score.json (92%)
+ rewrite ads2-assignments/m2/2.1 CC_Percolation/testcases_output.txt (78%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   e992800..1dd18fd  master -> master
