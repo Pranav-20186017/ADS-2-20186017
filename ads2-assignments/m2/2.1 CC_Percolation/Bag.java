@@ -1,3 +1,6 @@
+/**.
+ * { item_description }
+ */
 import java.util.Iterator;
 /**.
  * Class for bag.
@@ -6,11 +9,11 @@ import java.util.Iterator;
  */
 public class Bag<Item> implements Iterable<Item> {
     /**.
-     * { size of DS }
+     * { var_description }
      */
     private int n;
     /**.
-     * { first node }
+     * { var_description }
      */
     private Node first;
     /**.
@@ -18,11 +21,11 @@ public class Bag<Item> implements Iterable<Item> {
      */
     private class Node {
         /**.
-         * { object in a node. }
+         * { var_description }
          */
         private Item item;
         /**.
-         * { ptr to next node}
+         * { var_description }
          */
         private Node next;
     }
@@ -44,7 +47,7 @@ public class Bag<Item> implements Iterable<Item> {
         return first == null;
     }
 /**.
- * returns size of the DS.
+ * { function_description }
  *
  * @return     { description_of_the_return_value }
  * time complexity is 1
@@ -53,7 +56,7 @@ public class Bag<Item> implements Iterable<Item> {
         return n;
     }
 /**.
- * adds data to the DS.
+ * { function_description }
  *
  * @param      item  The item
  * time complexity is 1
@@ -66,7 +69,7 @@ public class Bag<Item> implements Iterable<Item> {
         n++;
     }
 /**.
- * iterates through DS.
+ * { function_description }
  *
  * @return     { description_of_the_return_value }
  * time complexity is 1
@@ -92,14 +95,14 @@ public class Bag<Item> implements Iterable<Item> {
             return current != null;
         }
         /**.
-         * removes data.
+         * { function_description }
          * time complexity is 1
          */
         public void remove() {
             throw new UnsupportedOperationException();
         }
         /**.
-         * returns next object.
+         * { function_description }
          *
          * @return     { description_of_the_return_value }
          * time complexity is 1
