@@ -7,7 +7,7 @@ public class ConnectedComponents {
      */
     private boolean[] marked;
     /**.
-     * { var_description }
+     * { var_description }.
      */
     private int[] id;
     /**.
