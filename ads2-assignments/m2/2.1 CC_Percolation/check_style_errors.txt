@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m2\2.1 CC_Percolation\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
