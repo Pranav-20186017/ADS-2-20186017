@@ -71,8 +71,6 @@ public class Bag<Item> implements Iterable<Item> {
         first.next = oldfirst;
         n++;
     }
-
-
     /**
      * { Return an iterator that iterates over the items in the bag }.
      * its complexity is O(N).

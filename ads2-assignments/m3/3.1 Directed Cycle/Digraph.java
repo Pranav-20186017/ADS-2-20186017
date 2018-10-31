@@ -30,7 +30,6 @@ public class Digraph {
             adj[i] = new Bag<Integer>();
         }
     }
-
     /**
      * returns no. of vertexes.
      *
