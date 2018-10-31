@@ -7,15 +7,15 @@ public class Graph {
     /**
      * { vertexes }.
      */
-    private final int v;
+    public final int v;
     /**
      * { edges }.
      */
-    private int e;
+    public int e;
     /**
      * { matrix of two dimensional }.
      */
-    private boolean[][] adj;
+    public boolean[][] adj;
 
     // empty graph with V vertices
 
@@ -76,15 +76,15 @@ public class Graph {
     /**
      * Class for adj iterator.
      */
-    private class AdjIterator implements Iterator<Integer>, Iterable<Integer> {
+    public class AdjIterator implements Iterator<Integer>, Iterable<Integer> {
         /**
          * { vertex }.
          */
-        private int v1;
+        public int v1;
         /**
          * { edge }.
          */
-        private int w = 0;
+        public int w = 0;
         /**
          * Constructs the object.
          *

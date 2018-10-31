@@ -7,24 +7,24 @@ public class Stack<Item> {
     /**
      * // size of the stack.
      */
-    private int size;
+    public int size;
     /**
      * // top of stack.
      */
-    private Node first;
+    public Node first;
 
     /**
      * Class for node.
      */
-    private class Node {
+    public class Node {
         /**
          * item.
          */
-        private Item item;
+        public Item item;
         /**
          * next node.
          */
-        private Node next;
+        public Node next;
     }
 
     /**

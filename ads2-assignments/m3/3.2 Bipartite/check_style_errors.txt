@@ -1,16 +1,37 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:12:16: Variable 'n' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:16:17: Variable 'first' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:25:21: Variable 'item' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:29:21: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:93:21: Variable 'current' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 6 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:10:22: Variable 'v' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:14:16: Variable 'e' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:18:24: Variable 'adj' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:83:20: Variable 'v1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:87:20: Variable 'w' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 6 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:9:20: Variable 'isBipartite' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:13:22: Variable 'color' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:17:22: Variable 'marked' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:21:18: Variable 'edgeTo' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:25:27: Variable 'cycle' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:96:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:100:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:10:16: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:14:17: Variable 'first' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:23:21: Variable 'item' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:27:21: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 5 errors.
