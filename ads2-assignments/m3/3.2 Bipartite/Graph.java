@@ -30,7 +30,6 @@ public class Graph {
         this.e = 0;
         this.adj = new boolean[v][v];
     }
-
     // and edges
 
     /**
