@@ -1,0 +1,20 @@
+warning: LF will be replaced by CRLF in ads2-assignments/m3/3.1 Directed Cycle/Bag.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m3/3.1 Directed Cycle/Digraph.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m3/3.1 Directed Cycle/Solution.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m3/3.1 Directed Cycle/Stack.java.
+The file will have its original line endings in your working directory.
+[master 7c92b12] "ads2_m3_a1_1: 8/8 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 9 files changed, 73 insertions(+), 89 deletions(-)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/Bag$ListIterator.class (80%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/Bag$Node.class (78%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/Bag.class (81%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/Stack$Node.class (75%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/Stack.class (96%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/result/score.json (81%)
+ rewrite ads2-assignments/m3/3.1 Directed Cycle/testcases_output.txt (73%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   35087ff..7c92b12  master -> master
