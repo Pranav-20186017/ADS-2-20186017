@@ -1,0 +1,16 @@
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.2 Bipartite\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.

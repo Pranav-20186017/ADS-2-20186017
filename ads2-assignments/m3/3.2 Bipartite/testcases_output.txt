@@ -1,0 +1,60 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+Graph is bipartite
+
+Your Output: 
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field Graph.v from class Graph$AdjIterator
+	at Graph$AdjIterator.hasNext(Graph.java:113)
+	at Bipartite.dfs(Solution.java:54)
+	at Bipartite.<init>(Solution.java:39)
+	at Solution.main(Solution.java:117)
+----------------------------------------
+
+########## Testcase 1: Failed ##########
+Expected Output: 
+Graph is bipartite
+
+Your Output: 
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field Graph.v from class Graph$AdjIterator
+	at Graph$AdjIterator.hasNext(Graph.java:113)
+	at Bipartite.dfs(Solution.java:54)
+	at Bipartite.<init>(Solution.java:39)
+	at Solution.main(Solution.java:117)
+----------------------------------------
+
+########## Testcase 2: Failed ##########
+Expected Output: 
+Graph is bipartite
+
+Your Output: 
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field Graph.v from class Graph$AdjIterator
+	at Graph$AdjIterator.hasNext(Graph.java:113)
+	at Bipartite.dfs(Solution.java:54)
+	at Bipartite.<init>(Solution.java:39)
+	at Solution.main(Solution.java:117)
+----------------------------------------
+
+########## Testcase 3: Failed ##########
+Expected Output: 
+Graph is not a bipartite
+
+Your Output: 
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field Graph.v from class Graph$AdjIterator
+	at Graph$AdjIterator.hasNext(Graph.java:113)
+	at Bipartite.dfs(Solution.java:54)
+	at Bipartite.<init>(Solution.java:39)
+	at Solution.main(Solution.java:117)
+----------------------------------------
+
+########## Testcase 4: Failed ##########
+Expected Output: 
+Graph is not a bipartite
+
+Your Output: 
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field Graph.v from class Graph$AdjIterator
+	at Graph$AdjIterator.hasNext(Graph.java:113)
+	at Bipartite.dfs(Solution.java:54)
+	at Bipartite.<init>(Solution.java:39)
+	at Solution.main(Solution.java:117)
+----------------------------------------
+
