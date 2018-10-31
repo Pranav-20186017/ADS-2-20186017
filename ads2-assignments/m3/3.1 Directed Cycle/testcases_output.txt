@@ -1,88 +1,64 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Cycle doesn't exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle doesn't exists.
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 Cycle doesn't exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle doesn't exists.
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 Cycle exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle exists.
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 Cycle exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle exists.
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 Cycle exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle exists.
 ----------------------------------------
 
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 Cycle exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle exists.
 ----------------------------------------
 
-########## Testcase 6: Failed ##########
+########## Testcase 6: Passed ##########
 Expected Output: 
 Cycle doesn't exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle doesn't exists.
 ----------------------------------------
 
-########## Testcase 7: Failed ##########
+########## Testcase 7: Passed ##########
 Expected Output: 
 Cycle exists.
 
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access method Bag$Node.<init>(LBag;)V from class Bag
-	at Bag.add(Bag.java:69)
-	at Digraph.addEdge(Digraph.java:63)
-	at Solution.main(Solution.java:109)
+Cycle exists.
 ----------------------------------------
 
