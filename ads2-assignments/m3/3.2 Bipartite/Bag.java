@@ -9,24 +9,24 @@ public class Bag<Item> implements Iterable<Item> {
     /**
      * number of elements in bag .
      */
-    public int n;
+    private int n;
     /**
      * pointer at beginning of bag .
      */
-    public Node first;
+    private Node first;
     /**
      * Class for node.
      *
      */
-    public class Node {
+    private class Node {
         /**
          *  variable for item .
          */
-        public Item item;
+        private Item item;
         /**
          *  variable for next node .
          */
-        public Node next;
+        private Node next;
     }
     /**
      * Constructs the object.
@@ -86,11 +86,11 @@ public class Bag<Item> implements Iterable<Item> {
     /**
      * Class for list iterator.
      */
-    public class ListIterator implements Iterator<Item> {
+    private class ListIterator implements Iterator<Item> {
         /**
          * { current node }.
          */
-        public Node current = first;
+        private Node current = first;
         /**
          * Determines if it has next.
          *

@@ -1,3 +1,5 @@
+//import java.util.Iterator;
+//import java.util.NoSuchElementException;
 /**
  * stack class.
  *
@@ -7,24 +9,24 @@ public class Stack<Item> {
     /**
      * // size of the stack.
      */
-    public int size;
+    private int size;
     /**
      * // top of stack.
      */
-    public Node first;
+    private Node first;
 
     /**
      * Class for node.
      */
-    public class Node {
+    private class Node {
         /**
          * item.
          */
-        public Item item;
+        private Item item;
         /**
          * next node.
          */
-        public Node next;
+        private Node next;
     }
 
     /**

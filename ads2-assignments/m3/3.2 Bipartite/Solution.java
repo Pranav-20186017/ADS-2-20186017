@@ -6,23 +6,23 @@ class Bipartite {
     /**
      * is the graph bipartite?
      */
-    public boolean isBipartite;
+    private boolean isBipartite;
     /**
      *  // color[v] gives vertices on one side of bipartition.
      */
-    public boolean[] color;
+    private boolean[] color;
     /**
      *  // marked[v] = true iff v has been visited in DFS.
      */
-    public boolean[] marked;
+    private boolean[] marked;
     /**
      * // edgeTo[v] = last edge on path to v.
      */
-    public int[] edgeTo;
+    private int[] edgeTo;
     /**
      *  // odd-length cycle.
      */
-    public Stack<Integer> cycle;
+    private Stack<Integer> cycle;
     /**
      * Constructs the object.
      *
@@ -49,7 +49,7 @@ class Bipartite {
      * @param      v     { vertex1 }
      * Time Complexity : O(E+V)
      */
-    public void dfs(final Graph g1, final int v) {
+    private void dfs(final Graph g1, final int v) {
         marked[v] = true;
         for (int w : g1.adj(v)) {
 
@@ -97,7 +97,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    public Solution() {
+    private Solution() {
 
     }
     /**
