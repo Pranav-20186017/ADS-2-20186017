@@ -3,7 +3,7 @@
  */
 public class Percolation {
     /**.
-     * { var_description }
+     * { var_description }.
      */
     private boolean[][] grid;
     /**.

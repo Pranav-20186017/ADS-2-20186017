@@ -3,7 +3,7 @@
  */
 class Graph {
     /**.
-     * { var_description }
+     * { var_description }.
      */
     private int ver;
     /**.

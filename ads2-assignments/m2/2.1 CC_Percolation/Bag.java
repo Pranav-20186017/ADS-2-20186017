@@ -1,6 +1,3 @@
-/**.
- * { item_description }
- */
 import java.util.Iterator;
 /**.
  * Class for bag.
