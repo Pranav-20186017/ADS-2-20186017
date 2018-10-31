@@ -1,64 +1,15 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:5:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:6: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:7:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:8:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:10:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:14:9: Class 'Bag' looks like designed for extension (can be subclassed), but the method 'isEmpty' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Bag' final or making the method 'isEmpty' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:14:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:17:9: Class 'Bag' looks like designed for extension (can be subclassed), but the method 'size' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Bag' final or making the method 'size' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:17:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:20:9: Class 'Bag' looks like designed for extension (can be subclassed), but the method 'add' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Bag' final or making the method 'add' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:20:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:27:9: Class 'Bag' looks like designed for extension (can be subclassed), but the method 'iterator' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Bag' final or making the method 'iterator' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:27:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:30: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:31:17: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:32:17: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:35:17: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:38:17: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Bag.java:39:27: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:2:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:2:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:3:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:5:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:13:9: Class 'Digraph' looks like designed for extension (can be subclassed), but the method 'vertex' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Digraph' final or making the method 'vertex' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:13:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:16:9: Class 'Digraph' looks like designed for extension (can be subclassed), but the method 'edges' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Digraph' final or making the method 'edges' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:16:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:19:9: Class 'Digraph' looks like designed for extension (can be subclassed), but the method 'addEdge' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Digraph' final or making the method 'addEdge' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:19:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:23:9: Class 'Digraph' looks like designed for extension (can be subclassed), but the method 'adj' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Digraph' final or making the method 'adj' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Digraph.java:23:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:3:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:5:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:6:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:7:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:12:27: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:17:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:37:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:41: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:42:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Solution.java:45:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m3\3.1 Directed Cycle\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
