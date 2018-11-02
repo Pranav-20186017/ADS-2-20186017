@@ -224,9 +224,8 @@ Audit done.
 Checkstyle ends with 25 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\Solution.java:35: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
@@ -269,6 +268,6 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:34:66: Expected @throws tag for 'Exception'. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:38:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'readSynsets' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'readSynsets' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:38:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:76:16: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:76:16: 'for' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
 Checkstyle ends with 9 errors.

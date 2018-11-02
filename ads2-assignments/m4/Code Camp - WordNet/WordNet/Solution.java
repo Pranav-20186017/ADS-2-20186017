@@ -1,8 +1,8 @@
 import java.util.Scanner;
-/**.
- * { item_description }
+/**
+ * Class for solution.
  */
-public final class Solution {
+final class Solution {
     /**.
      * Constructs the object.
      */
@@ -23,7 +23,6 @@ public final class Solution {
         String m = "Files" + "\\" + sc.nextLine();
         String word = sc.nextLine();
         try {
-            // System.out.println("in try");
             WordNet wn = new WordNet(n, m);
             if (word.equals("Graph")) {
                 wn.display();
@@ -32,7 +31,8 @@ public final class Solution {
                     String[] tokens = sc.nextLine().split(" ");
                     String str = wn.sap(tokens[0], tokens[1]);
                     int id = wn.distance(tokens[0], tokens[1]);
-                    System.out.println("distance = " + id + ", ancestor = " + str);
+                    System.out.println("distance = "
+                        + id + ", ancestor = " + str);
                 }
             }
         } catch (final Exception e) {
