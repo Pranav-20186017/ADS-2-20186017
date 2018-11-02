@@ -41,7 +41,6 @@ class Bipartite {
         }
 
     }
-
     /**
      * method for dfs(depth first search).
      *
