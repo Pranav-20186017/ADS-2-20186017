@@ -313,9 +313,15 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:66:73: '/' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:66:81: 'typecast' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:72:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:76: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:73:27: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:74:50: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:75:46: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:75:47: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:75:55: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:75:56: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:80: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 32 errors.
+Checkstyle ends with 38 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

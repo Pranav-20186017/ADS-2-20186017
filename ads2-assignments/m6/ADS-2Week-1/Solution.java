@@ -70,7 +70,11 @@ class PageRank {
 		return nxtval[v];
 	}
 	public String toString() {
-		return Arrays.toString(prval);
+		String str= "";
+		for (int i = 0; i < prval.length;i++) {
+			str = str + i + " - "+prval[i]+"\n";
+		}
+		return str;
 	}
 }
 class WebSearch {
