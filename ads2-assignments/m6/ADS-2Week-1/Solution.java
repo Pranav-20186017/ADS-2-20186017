@@ -46,9 +46,9 @@ class PageRank {
 			prval[y] = (1.0 / (graph.V()));
 		}
 		nxtval = new double[graph.V()];
-		updatingprvals();
+		updateVals();
 	}
-	void updatingprvals() {
+	void updateVals() {
 		for (int i = 0; i < 1000; i++) {
 			// System.out.println("iteration number " + i);
 			for (int j = 0; j < graph.V(); j++) {
