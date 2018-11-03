@@ -83,7 +83,7 @@ class PageRank {
             ranklist[i] = (1 / (double)(vertices));
         }
         Digraph revdigraph = digraph.reverse();
-        for (int i = 0; i < 109; i++) {
+        for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < vertices; j++) {
                 temp = 0.0;
                 for (int k : revdigraph.adj(j)) {
