@@ -3,26 +3,32 @@ import java.util.Arrays;
 /**
 Class Solution.
 */
-public final class Solution {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
     /**
      * Main.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        // read the first line of the tokens to get the number of vertices
         Scanner sc = new Scanner(System.in);
         int vertices = Integer.parseInt(sc.nextLine());
         String[] tokens;
         Digraph digraph = new Digraph(vertices);
         Digraph aux = new Digraph(vertices);
-        // iterate count of vertices times
         for (int i = 0; i < vertices; i++) {
             tokens = sc.nextLine().split(" ");
             if (tokens.length >= 2) {
                 for (int j = 1; j < tokens.length; j++) {
-                    digraph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
-                    aux.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+                    digraph.addEdge(Integer.parseInt(tokens[0]),
+                        Integer.parseInt(tokens[j]));
+                    aux.addEdge(Integer.parseInt(tokens[0]),
+                        Integer.parseInt(tokens[j]));
                 }
             } else {
                 for (int h = 0; (h < vertices); h++) {
@@ -87,11 +93,7 @@ class PageRank {
             } else {
                 ranklist = finalranks.clone();
             }
-        }
-        // for (int i = 0; i < vertices; i++) {
-        //     System.out.print(i + " - " + finalranks[i] + "\n");
-        // }
-       
+        }       
     }
      public String toString() {
             String str = "";
