@@ -2,7 +2,6 @@ import java.util.Arrays;
 public class Solution {
     public static void main(String[] args) {
         // read the first line of the input to get the number of vertices
-
         int vnum = Integer.parseInt(StdIn.readLine());
         // iterate count of vertices times
 
@@ -12,7 +11,8 @@ public class Solution {
         for (int i = 0; i < vnum; i++) {
             String[] edges = StdIn.readLine().split(" ");
             for (int k = 1; k < edges.length; k++) {
-                graph.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[k]));
+                graph.addEdge(Integer.parseInt(edges[0]),
+                    Integer.parseInt(edges[k]));
             }
         }
         System.out.println(graph);
@@ -59,7 +59,9 @@ class PageRank {
     double getPR(int v) {
         double testprval = 0.0;
         for(Integer eachadj : graph.adj(v)) {
-            testprval = testprval + ((double)prval[eachadj]/(double)graph.outdegree(eachadj));
+            testprval = testprval +
+            ((double)prval[eachadj]
+                /(double)graph.outdegree(eachadj));
         }
         nxtval[v] = testprval;
         return nxtval[v];
