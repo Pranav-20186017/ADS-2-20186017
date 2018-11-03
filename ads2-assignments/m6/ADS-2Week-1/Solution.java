@@ -1,7 +1,4 @@
 import java.util.Arrays;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Scanner;
 class PageRank {
     private Digraph pggraph;
     private double[] prval;
@@ -33,15 +30,15 @@ class PageRank {
 }
 class WebSearch {
     public WebSearch() {
-
+        
     }
 }
 
 public class Solution {
     public static void main(String[] args) {
         // read the first line of the input to get the number of vertices
-        Scanner sc = new Scanner(System.in);
-        int vertexnum = sc.nextInt();
+
+        int vertexnum = Integer.parseInt(StdIn.readLine());
         // iterate count of vertices times
 
         // to read the adjacency list from std input
