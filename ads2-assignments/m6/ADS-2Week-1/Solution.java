@@ -45,6 +45,9 @@ final class Solution {
         System.out.println(pagerank);
     }
 }
+/**
+ * Class for page rank.
+ */
 class PageRank {
     /**
      * Private Value.
@@ -74,10 +77,10 @@ class PageRank {
     protected PageRank(final Digraph d) {
         digraph = d;
         vertices = digraph.V();
-        ranklist = new double[vertices];
-        finalranks = new double[vertices];
+        ranklist = new double [vertices];
+        finalranks = new double [vertices];
         for (int i = 0; i < vertices; i++) {
-            ranklist[i] = (1 / (double)(vertices));
+            ranklist[i] = (1 / (double) (vertices));
         }
         Digraph revdigraph = digraph.reverse();
         for (int i = 0; i < 1000; i++) {
