@@ -49,7 +49,7 @@ class PageRank {
         updateVals();
     }
     void updateVals() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 105; i++) {
             for (int j = 0; j < graph.V(); j++) {
                 getPR(j);
             }
