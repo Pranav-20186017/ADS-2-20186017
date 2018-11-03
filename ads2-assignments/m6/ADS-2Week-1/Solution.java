@@ -36,6 +36,7 @@ public final class Solution {
         }
         System.out.println(digraph);
         PageRank pagerank = new PageRank(aux);
+        System.out.println(pagerank);
     }
 }
 class PageRank {
@@ -77,24 +78,26 @@ class PageRank {
             for (int j = 0; j < vertices; j++) {
                 temp = 0.0;
                 for (int k : revdigraph.adj(j)) {
-                    // System.out.println(k);
                     temp += ((ranklist[k]) / ((double)(digraph.outdegree(k))));
-                    // System.out.println(j);
-                    // System.out.println(temp);
                 }
                 finalranks[j] = temp;
-                // System.out.println(finalranks[j]);
-                // System.out.println("one sublist is done");
             }
             if (Arrays.equals(ranklist, finalranks)) {
                 break;
             } else {
                 ranklist = finalranks.clone();
             }
-            // System.out.println("iteration done");
         }
-        for (int i = 0; i < vertices; i++) {
-            System.out.print(i + " - " + finalranks[i] + "\n");
-        }
+        // for (int i = 0; i < vertices; i++) {
+        //     System.out.print(i + " - " + finalranks[i] + "\n");
+        // }
+       
     }
+     public String toString() {
+            String str = "";
+            for (int i = 0; i < vertices; i++) {
+                str = str + i + " - " + finalranks[i] + "\n";
+            }
+            return str;
+        }
 }
