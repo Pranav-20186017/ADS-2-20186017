@@ -80,7 +80,7 @@ class PageRank {
         ranklist = new double [vertices];
         finalranks = new double [vertices];
         for (int i = 0; i < vertices; i++) {
-            ranklist[i] = (1 / (double) (vertices));
+            ranklist[i] = (1 / (double)(vertices));
         }
         Digraph revdigraph = digraph.reverse();
         for (int i = 0; i < 1000; i++) {
