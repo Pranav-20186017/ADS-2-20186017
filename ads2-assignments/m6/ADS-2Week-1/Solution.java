@@ -18,9 +18,9 @@ public class Solution {
 		System.out.println(graph);
 		// Create page rank object and pass the graph object to the constructor
 
-        PageRank pgrankobj = new PageRank(graph);
+        PageRank pagerank = new PageRank(graph);
 		// print the page rank object
-        System.out.println(pgrankobj);
+        System.out.println(pagerank);
 		// This part is only for the final test case
 
 		// File path to the web content
@@ -36,22 +36,22 @@ public class Solution {
 	}
 }
 class PageRank {
-	private Digraph pggraph;
+	private Digraph graph;
 	private double[] prval;
 	private double[] nxtval;
 	PageRank(Digraph graph) {
-		this.pggraph = graph;
-		prval = new double[pggraph.V()];
+		this.graph = graph;
+		prval = new double[graph.V()];
 		for(int y = 0; y < prval.length; y++) {
-			prval[y] = (1.0 / (pggraph.V()));
+			prval[y] = (1.0 / (graph.V()));
 		}
-		nxtval = new double[pggraph.V()];
+		nxtval = new double[graph.V()];
 		updatingprvals();
 	}
 	void updatingprvals() {
 		for (int i = 0; i < 1000; i++) {
 			// System.out.println("iteration number " + i);
-			for (int j = 0; j < pggraph.V(); j++) {
+			for (int j = 0; j < graph.V(); j++) {
 				getPR(j);
 			}
 			prval = Arrays.copyOf(nxtval, nxtval.length);
@@ -61,9 +61,9 @@ class PageRank {
 	double getPR(int v) {
 		double testprval = 0.0;
 		// System.out.println(v + "v'svalue");
-		for(Integer eachadj : pggraph.adj(v)) {
-			// System.out.println(prval[eachadj]/(pggraph.outdegree(eachadj)) + "everytime" + eachadj);
-			testprval = testprval + ((double)prval[eachadj]/(double)pggraph.outdegree(eachadj));
+		for(Integer eachadj : graph.adj(v)) {
+			// System.out.println(prval[eachadj]/(graph.outdegree(eachadj)) + "everytime" + eachadj);
+			testprval = testprval + ((double)prval[eachadj]/(double)graph.outdegree(eachadj));
 		}
 		// System.out.println(testprval);
 		nxtval[v] = testprval;
