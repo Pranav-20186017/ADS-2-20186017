@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 class PageRank {
     private Digraph digraph;
     private double[] prval;
@@ -57,10 +58,12 @@ class PageRank {
 }
 public class Solution {
     public static void main(String[] args) {
-        int vertices = Integer.parseInt(StdIn.readLine());
+        Scanner sc = new Scanner(System.in);
+        int vertices = sc.nextInt();
         Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
-            String[] edges = StdIn.readLine().split(" ");
+            String line = sc.nextLine();
+            String[] edges = line.split(" ");
             for (int k = 1; k < edges.length; k++) {
                 graph.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[k]));
             }
