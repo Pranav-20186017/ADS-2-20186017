@@ -67,7 +67,7 @@ class PageRank {
      *
      * @return     { description_of_the_return_value }
      */
-    double update (final int v) {
+    double update(final int v) {
         double rank = 0.0;
         if (digraph.indegree(v) == 0) {
             crval[v] = 0.0;
@@ -92,6 +92,9 @@ class PageRank {
         return str;
     }
 }
+/**
+ * Class for solution.
+ */
 final class Solution {
     /**
      * Constructs the object.
