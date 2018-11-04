@@ -122,5 +122,10 @@ final class Solution {
         PageRank pagerank = new PageRank(graph);
         System.out.println(pagerank);
         String file = "WebContent.txt";
+        WebSearch ws = new WebSearch(pagerank, file);
+        while (StdIn.hasNextLine()) {
+            String[] q = StdIn.readLine().split("=");
+            System.out.println(ws.iAmFeelingLucky(q[1]));
+        }
     }
 }

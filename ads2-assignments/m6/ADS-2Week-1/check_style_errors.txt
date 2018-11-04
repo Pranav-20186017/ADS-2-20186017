@@ -450,3 +450,20 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\StdIn.java:624: Line is longer than 80 characters (found 87). [LineLength]
 Audit done.
 Checkstyle ends with 129 errors.
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:3:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:3:18: Variable 'pagerank' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:4:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:4:41: Variable 'ht' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:5:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:5:19: Parameter rankobj should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:5:37: Parameter filename should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:26:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:26:29: Parameter input should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:27:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:41:9: Missing a Javadoc comment. [JavadocMethod]
+Audit done.
+Checkstyle ends with 14 errors.
