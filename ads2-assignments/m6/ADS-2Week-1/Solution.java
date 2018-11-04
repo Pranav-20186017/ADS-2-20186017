@@ -10,11 +10,11 @@ class PageRank {
         for (int i = 0; i < prval.length; i++) {
             prval[i] = (1.0 / (digraph.V()));
         }
-        for (int j = 0; j < digraph.V(); j++) {
-            if (digraph.outdegree(j) == 0) {
-                for (int k = 0; k < digraph.V(); k++) {
-                    if (k != j) {
-                        digraph.addEdge(j, k);
+        for (int z = 0; z < digraph.V(); z++) {
+            if (digraph.outdegree(z) == 0) {
+                for (int b = 0; b < digraph.V(); b++) {
+                    if (b != z) {
+                        digraph.addEdge(z, b);
                     }
                 }
             }
