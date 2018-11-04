@@ -1,8 +1,25 @@
 import java.util.Arrays;
+/**
+ * Class for page rank.
+ */
 class PageRank {
+    /**
+     * object for the digraph class.
+     */
     private Digraph digraph;
+    /**
+     * container to hold values of rank from previous iteration.
+     */
     private double[] prval;
+    /**
+     * container to hold updated values of rank after each iteration.
+     */
     private double[] crval;
+    /**
+     * Constructs the object.
+     *
+     * @param      graph  The graph
+     */
     PageRank(Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
@@ -21,17 +38,34 @@ class PageRank {
         crval = new double[digraph.V()];
         updateValues();
     }
+    /**
+     * { function_description }
+     */
     void updateValues() {
-        for (int i = 1; i < 990; i++) {
+        for (int i = 1; i < 1000; i++) {
             for (int j = 0; j < digraph.V(); j++) {
                 update(j);
             }
             prval = Arrays.copyOf(crval, crval.length);
         }
     }
+    /**
+     * Gets the page rank.
+     *
+     * @param      v     { no of vertices in the graph }.
+     *
+     * @return     The page rank.
+     */
     double getPR(int v) {
         return crval[v];
     }
+    /**
+     * updates the values in cr after each iteration.
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     double update (int v) {
         double rank = 0.0;
         if (digraph.indegree(v) == 0) {
@@ -44,6 +78,11 @@ class PageRank {
         crval[v] = rank;
         return crval[v];
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str = "";
         for (int l = 0; l < crval.length; l++) {
@@ -65,7 +104,8 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        int vertices = Integer.parseInt(StdIn.readLine());
+        int vertices = Integer.parseInt(
+            StdIn.readLine());
         Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
             String[] edges = StdIn.readLine().split(" ");
