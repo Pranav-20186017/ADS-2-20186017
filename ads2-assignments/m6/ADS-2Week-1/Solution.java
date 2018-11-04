@@ -13,7 +13,7 @@ class PageRank {
         for (int j = 0; j < digraph.V(); j++) {
             if (digraph.outdegree(j) == 0) {
                 for (int k = 0; k < digraph.V(); k++) {
-                    if (j != k) {
+                    if (k != j) {
                         digraph.addEdge(j, k);
                     }
                 }
