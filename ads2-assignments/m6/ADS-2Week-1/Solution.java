@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Hashtable;
 class PageRank {
     private Digraph digraph;
     private double[] prval;
@@ -7,25 +7,25 @@ class PageRank {
     PageRank(Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
-        for (int i = 0; i < prval.length; i++) {
-            prval[i] = (1.0 / digraph.V());
+        for (int y = 0; y < prval.length; y++) {
+            prval[y] = (1.0 / (digraph.V()));
         }
-        for (int j = 0; j < digraph.V(); j++) {
-            if (digraph.outdegree(j) == 0) {
-                for (int k = 0; k < digraph.V(); k++) {
-                    if (j != k) {
-                        digraph.addEdge(j, k);
+        for (int z = 0; z < digraph.V(); z++) {
+            if (digraph.outdegree(z) == 0) {
+                for (int b = 0; b < digraph.V(); b++) {
+                    if (b != z) {
+                        digraph.addEdge(z, b);
                     }
                 }
             }
         }
         crval = new double[digraph.V()];
-        updatePageRankValues();
+        updateValues();
     }
-    void updatePageRankValues() {
-        for (int l = 1; l < 1000; l++) {
-            for (int m = 0; m < digraph.V(); m++) {
-                update(m);
+    void updateValues() {
+        for (int i = 1; i < 990; i++) {
+            for (int j = 0; j < digraph.V(); j++) {
+                update(j);
             }
             prval = Arrays.copyOf(crval, crval.length);
         }
@@ -33,51 +33,34 @@ class PageRank {
     double getPR(int v) {
         return crval[v];
     }
-    double update(int v) {
-        double pgrank = 0.0;
+    double update (int v) {
+        double rank = 0.0;
         if (digraph.indegree(v) == 0) {
             crval[v] = 0.0;
             return crval[v];
         }
-        for (int itr : digraph.reverse().adj(v)) {
-            pgrank += (prval[itr] / digraph.outdegree(itr));
+        for (Integer itr : digraph.reverse().adj(v)) {
+            rank = rank + (prval[itr] / digraph.outdegree(itr));
         }
-        crval[v] = pgrank;
+        crval[v] = rank;
         return crval[v];
     }
     public String toString() {
         String str = "";
-            for (int i = 0; i < crval.length; i++) {
-                str = str + i + " - " + crval[i] + "\n";
-            }
-            return str;
+        for (int l = 0; l < crval.length; l++) {
+            str = str + l + " - " + crval[l] + "\n";
+        }
+        return str;
     }
 }
-class WebSearch {
-
-}
-class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //unused.
-    }
-    /**
-     * main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int vertices = sc.nextInt();
+public class Solution {
+    public static void main(String[] args) {
+        int vertices = Integer.parseInt(StdIn.readLine());
         Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
-            String line = sc.nextLine();
-            String[] edge = line.split(" ");
-            for (int j = 1; j < edge.length; j++) {
-                graph.addEdge(Integer.parseInt(edge[0]),
-                    Integer.parseInt(edge[j]));
+            String[] edges = StdIn.readLine().split(" ");
+            for (int k = 1; k < edges.length; k++) {
+                graph.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[k]));
             }
         }
         System.out.println(graph);
