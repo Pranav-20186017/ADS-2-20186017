@@ -71,17 +71,17 @@ class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int vertices = sc.nextInt();
-        Digraph digraph = new Digraph(vertices);
+        Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
             String line = sc.nextLine();
             String[] edge = line.split(" ");
             for (int j = 1; j < edge.length; j++) {
-                digraph.addEdge(Integer.parseInt(edge[0]),
+                graph.addEdge(Integer.parseInt(edge[0]),
                     Integer.parseInt(edge[j]));
             }
         }
-        System.out.println(digraph);
-        PageRank pagerank = new PageRank(digraph);
+        System.out.println(graph);
+        PageRank pagerank = new PageRank(graph);
         System.out.println(pagerank);
         String file = "WebContent.txt";
     }
