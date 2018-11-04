@@ -1,5 +1,5 @@
 import java.util.Arrays;
-import java.util.Hashtable;
+import java.util.Scanner;
 class PageRank {
     private Digraph digraph;
     private double[] prval;
@@ -7,14 +7,14 @@ class PageRank {
     PageRank(Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
-        for (int y = 0; y < prval.length; y++) {
-            prval[y] = (1.0 / (digraph.V()));
+        for (int i = 0; i < prval.length; i++) {
+            prval[i] = (1.0 / (digraph.V()));
         }
-        for (int z = 0; z < digraph.V(); z++) {
-            if (digraph.outdegree(z) == 0) {
-                for (int b = 0; b < digraph.V(); b++) {
-                    if (b != z) {
-                        digraph.addEdge(z, b);
+        for (int j = 0; j < digraph.V(); j++) {
+            if (digraph.outdegree(j) == 0) {
+                for (int k = 0; k < digraph.V(); k++) {
+                    if (j != k) {
+                        digraph.addEdge(j, k);
                     }
                 }
             }
@@ -55,12 +55,15 @@ class PageRank {
 }
 public class Solution {
     public static void main(String[] args) {
-        int vertices = Integer.parseInt(StdIn.readLine());
+        Scanner sc = new Scanner(System.in);
+        int vertices = sc.nextInt();
         Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
-            String[] edges = StdIn.readLine().split(" ");
+            String line = sc.nextLine();
+            String[] edges = line.split(" ");
             for (int k = 1; k < edges.length; k++) {
-                graph.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[k]));
+                graph.addEdge(Integer.parseInt(edges[0]),
+                    Integer.parseInt(edges[k]));
             }
         }
         System.out.println(graph);

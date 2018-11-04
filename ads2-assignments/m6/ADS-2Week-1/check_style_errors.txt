@@ -283,7 +283,6 @@ Audit done.
 Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:2:8: Unused import - java.util.Hashtable. [UnusedImports]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:3: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:5:5: Missing a Javadoc comment. [JavadocVariable]
@@ -302,9 +301,8 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:56:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:57:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:57:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:63: Line is longer than 80 characters (found 86). [LineLength]
 Audit done.
-Checkstyle ends with 21 errors.
+Checkstyle ends with 19 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
