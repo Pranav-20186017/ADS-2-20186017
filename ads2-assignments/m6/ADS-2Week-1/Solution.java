@@ -20,7 +20,7 @@ class PageRank {
      *
      * @param      graph  The graph
      */
-    PageRank(Digraph graph) {
+    PageRank(final Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
         for (int y = 0; y < prval.length; y++) {
@@ -39,10 +39,11 @@ class PageRank {
         updateValues();
     }
     /**
-     * { function_description }
+     * updates values and resizes the array.
      */
     void updateValues() {
-        for (int i = 1; i < 1000; i++) {
+        final int thousand = 1000;
+        for (int i = 1; i < thousand; i++) {
             for (int j = 0; j < digraph.V(); j++) {
                 update(j);
             }
@@ -56,7 +57,7 @@ class PageRank {
      *
      * @return     The page rank.
      */
-    double getPR(int v) {
+    double getPR(final int v) {
         return crval[v];
     }
     /**
@@ -66,7 +67,7 @@ class PageRank {
      *
      * @return     { description_of_the_return_value }
      */
-    double update (int v) {
+    double update (final int v) {
         double rank = 0.0;
         if (digraph.indegree(v) == 0) {
             crval[v] = 0.0;
