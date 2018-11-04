@@ -283,15 +283,24 @@ Audit done.
 Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:80:30: 'double' is followed by whitespace. [NoWhitespaceAfter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:81:32: 'double' is followed by whitespace. [NoWhitespaceAfter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:83:40: 'typecast' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:86:29: '1000' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:90:55: 'typecast' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:99: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:101:6: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:3: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:5:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:6:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:7:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:8:29: '990' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:15:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:15:14: Parameter graph should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:33:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:33:18: Parameter v should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:36:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:36:19: Parameter v should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:48:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:56: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:59: Class Solution should be declared as final. [FinalClass]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Solution.java:59: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 17 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

@@ -1,9 +1,62 @@
 import java.util.Scanner;
 import java.util.Arrays;
-/**
-Class Solution.
-*/
-final class Solution {
+class PageRank {
+    private Digraph digraph;
+    private double[] prval;
+    private double[] crval;
+    void updatePageRankValues() {
+        for (int l = 1; l < 990; l++) {
+            for (int m = 0; m < digraph.V(); m++) {
+                update(m);
+            }
+            prval = Arrays.copyOf(crval, crval.length);
+        }
+    }
+    PageRank(Digraph graph) {
+        this.digraph = graph;
+        prval = new double[digraph.V()];
+        for (int i = 0; i < prval.length; i++) {
+            prval[i] = (1.0 / digraph.V());
+        }
+        for (int j = 0; j < digraph.V(); j++) {
+            if (digraph.outdegree(j) == 0) {
+                for (int k = 0; k < digraph.V(); k++) {
+                    if (j != k) {
+                        digraph.addEdge(j, k);
+                    }
+                }
+            }
+        }
+        crval = new double[digraph.V()];
+        updatePageRankValues();
+    }
+    double getPR(int v) {
+        return crval[v];
+    }
+    double update(int v) {
+        double pgrank = 0.0;
+        if (digraph.indegree(v) == 0) {
+            crval[v] = 0.0;
+            return crval[v];
+        }
+        for (int itr : digraph.reverse().adj(v)) {
+            pgrank += (prval[itr] / digraph.outdegree(itr));
+        }
+        crval[v] = pgrank;
+        return crval[v];
+    }
+    public String toString() {
+        String str = "";
+            for (int i = 0; i < crval.length; i++) {
+                str = str + i + " - " + crval[i] + "\n";
+            }
+            return str;
+    }
+}
+class WebSearch {
+
+}
+class Solution {
     /**
      * Constructs the object.
      */
@@ -11,98 +64,25 @@ final class Solution {
         //unused.
     }
     /**
-     * Main.
+     * main function.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vertices = Integer.parseInt(sc.nextLine());
-        String[] tokens;
+        int vertices = sc.nextInt();
         Digraph digraph = new Digraph(vertices);
-        Digraph aux = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
-            tokens = sc.nextLine().split(" ");
-            if (tokens.length >= 2) {
-                for (int j = 1; j < tokens.length; j++) {
-                    digraph.addEdge(Integer.parseInt(tokens[0]),
-                        Integer.parseInt(tokens[j]));
-                    aux.addEdge(Integer.parseInt(tokens[0]),
-                        Integer.parseInt(tokens[j]));
-                }
-            } else {
-                for (int h = 0; (h < vertices); h++) {
-                    if (h == i) {
-                        continue;
-                    } else {
-                        aux.addEdge(Integer.parseInt(tokens[0]), h);
-                    }
-                }
+            String line = sc.nextLine();
+            String[] edge = line.split(" ");
+            for (int j = 1; j < edge.length; j++) {
+                digraph.addEdge(Integer.parseInt(edge[0]),
+                    Integer.parseInt(edge[j]));
             }
         }
         System.out.println(digraph);
-        PageRank pagerank = new PageRank(aux);
+        PageRank pagerank = new PageRank(digraph);
         System.out.println(pagerank);
+        String file = "WebContent.txt";
     }
-}
-/**
- * Class for page rank.
- */
-class PageRank {
-    /**
-     * Private Value.
-     */
-    private Digraph digraph;
-    /**
-     * Private Value.
-     */
-    private int vertices;
-    /**
-     * Private Value.
-     */
-    private double[] ranklist;
-    /**
-     * Private Value.
-     */
-    private double[] finalranks;
-    /**
-     * Private Value.
-     */
-    private double temp;
-    /**
-     * Constructs the object.
-     *
-     * @param      d     { parameter_description }
-     */
-    protected PageRank(final Digraph d) {
-        digraph = d;
-        vertices = digraph.V();
-        ranklist = new double [vertices];
-        finalranks = new double [vertices];
-        for (int i = 0; i < vertices; i++) {
-            ranklist[i] = (1 / (double)(vertices));
-        }
-        Digraph revdigraph = digraph.reverse();
-        for (int i = 0; i < 1000; i++) {
-            for (int j = 0; j < vertices; j++) {
-                temp = 0.0;
-                for (int k : revdigraph.adj(j)) {
-                    temp += ((ranklist[k]) / ((double)(digraph.outdegree(k))));
-                }
-                finalranks[j] = temp;
-            }
-            if (Arrays.equals(ranklist, finalranks)) {
-                break;
-            } else {
-                ranklist = finalranks.clone();
-            }
-        }       
-    }
-     public String toString() {
-            String str = "";
-            for (int i = 0; i < vertices; i++) {
-                str = str + i + " - " + finalranks[i] + "\n";
-            }
-            return str;
-        }
 }
