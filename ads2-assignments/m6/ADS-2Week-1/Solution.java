@@ -4,14 +4,6 @@ class PageRank {
     private Digraph digraph;
     private double[] prval;
     private double[] crval;
-    void updatePageRankValues() {
-        for (int l = 1; l < 1000; l++) {
-            for (int m = 0; m < digraph.V(); m++) {
-                update(m);
-            }
-            prval = Arrays.copyOf(crval, crval.length);
-        }
-    }
     PageRank(Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
@@ -29,6 +21,14 @@ class PageRank {
         }
         crval = new double[digraph.V()];
         updatePageRankValues();
+    }
+    void updatePageRankValues() {
+        for (int l = 1; l < 1000; l++) {
+            for (int m = 0; m < digraph.V(); m++) {
+                update(m);
+            }
+            prval = Arrays.copyOf(crval, crval.length);
+        }
     }
     double getPR(int v) {
         return crval[v];
