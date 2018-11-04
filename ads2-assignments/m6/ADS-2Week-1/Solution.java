@@ -5,7 +5,7 @@ class PageRank {
     private double[] prval;
     private double[] crval;
     void updatePageRankValues() {
-        for (int l = 1; l < 990; l++) {
+        for (int l = 1; l < 1000; l++) {
             for (int m = 0; m < digraph.V(); m++) {
                 update(m);
             }
