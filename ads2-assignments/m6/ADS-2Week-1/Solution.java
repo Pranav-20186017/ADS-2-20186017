@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Scanner;
 class PageRank {
     private Digraph digraph;
     private double[] prval;
@@ -7,8 +6,8 @@ class PageRank {
     PageRank(Digraph graph) {
         this.digraph = graph;
         prval = new double[digraph.V()];
-        for (int i = 0; i < prval.length; i++) {
-            prval[i] = (1.0 / (digraph.V()));
+        for (int y = 0; y < prval.length; y++) {
+            prval[y] = (1.0 / (digraph.V()));
         }
         for (int z = 0; z < digraph.V(); z++) {
             if (digraph.outdegree(z) == 0) {
@@ -28,6 +27,9 @@ class PageRank {
                 update(j);
             }
             prval = Arrays.copyOf(crval, crval.length);
+            // if(Arrays.equals(prval, crval)) {
+            //  return;
+            // }
         }
     }
     double getPR(int v) {
@@ -39,8 +41,8 @@ class PageRank {
             crval[v] = 0.0;
             return crval[v];
         }
-        for (Integer itr : digraph.reverse().adj(v)) {
-            rank = rank + (prval[itr] / digraph.outdegree(itr));
+        for (Integer eachadj : digraph.reverse().adj(v)) {
+            rank = rank + (prval[eachadj] / digraph.outdegree(eachadj));
         }
         crval[v] = rank;
         return crval[v];
@@ -55,20 +57,18 @@ class PageRank {
 }
 public class Solution {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int vertices = sc.nextInt();
+        int vertices = Integer.parseInt(StdIn.readLine());
         Digraph graph = new Digraph(vertices);
         for (int i = 0; i < vertices; i++) {
-            String line = sc.nextLine();
-            String[] edges = line.split(" ");
+            String[] edges = StdIn.readLine().split(" ");
             for (int k = 1; k < edges.length; k++) {
-                graph.addEdge(Integer.parseInt(edges[0]),
-                    Integer.parseInt(edges[k]));
+                graph.addEdge(Integer.parseInt(edges[0]), Integer.parseInt(edges[k]));
             }
         }
         System.out.println(graph);
         PageRank pagerank = new PageRank(graph);
         System.out.println(pagerank);
         String file = "WebContent.txt";
+
     }
 }
