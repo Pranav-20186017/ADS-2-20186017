@@ -112,6 +112,11 @@ public class Stack<Item> implements Iterable<Item> {
     Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
     }
+    /**
+     * Class for list iterator.
+     *
+     * @param      <Item>  The item
+     */
     private class ListIterator<Item> implements Iterator<Item> {
         /**
          * current node.
@@ -120,10 +125,10 @@ public class Stack<Item> implements Iterable<Item> {
         /**
          * Constructs the object.
          *
-         * @param      first  The first
+         * @param      current  The first
          */
-        ListIterator(final Node<Item> first) {
-            current = first;
+        ListIterator(final Node<Item> current) {
+            this.current = current;
         }
         /**
          * Determines if it has next.
