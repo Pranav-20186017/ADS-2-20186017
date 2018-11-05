@@ -145,7 +145,9 @@ public class Stack<Item> implements Iterable<Item> {
          * @return     { new item }
          */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next; 
             return item;
