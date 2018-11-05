@@ -42,7 +42,7 @@ class PageRank {
      * updates values and resizes the array.
      */
     void updateValues() {
-        final int thousand = 10001;
+        final int thousand = 1000;
         for (int i = 0; i < thousand; i++) {
             for (int j = 0; j < digraph.V(); j++) {
                 update(j);

@@ -424,7 +424,7 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:5:37: Parameter filename should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:26:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:26:29: Parameter input should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:27:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:27:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m6\ADS-2Week-1\WebSearch.java:41:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
 Checkstyle ends with 14 errors.
