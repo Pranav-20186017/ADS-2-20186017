@@ -1,0 +1,13 @@
+Maximum Spanning Tree
+
+To find a maximum spanning tree we can use kruskal's algorithm.
+
+We have to tweak it a little bit to get a Maximum Spanning Tree instead of a minumum one.
+
+We have sort the adjacency list in descending order instead of ascending order and apply kruskal's algorithm
+
+Consider the edges that do'nt lead to cycles in the MST, ignore such edges
+
+When we are done iterating for V -1 times V being the no of verticies in the given graph
+
+We get our Maximum Spanning Tree
