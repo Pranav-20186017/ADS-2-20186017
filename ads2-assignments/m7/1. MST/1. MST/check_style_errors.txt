@@ -399,21 +399,13 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:22:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:23:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:108: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:109:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:110:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:110:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:110:29: Parameter first should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:110:40: 'first' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:113:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:116:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:119:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:120: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:122: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:115: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:125:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:125:46: 'first' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:148: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:150: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 6 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\StdOut.java:18: Line is longer than 80 characters (found 106). [LineLength]

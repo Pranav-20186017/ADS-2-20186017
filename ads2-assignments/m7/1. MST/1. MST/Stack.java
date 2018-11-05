@@ -19,7 +19,13 @@ public class Stack<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private static class Node<Item> {
+        /**
+         * item in a linked list.
+         */
         private Item item;
+        /**
+         * pointer to next node.
+         */
         private Node<Item> next;
     }
     /**
@@ -99,23 +105,45 @@ public class Stack<Item> implements Iterable<Item> {
         return s.toString();
     }
     /**
-     * @return an iterator to this stack that.
-     * iterates through the items in LIFO order
+     * iterator.
+     *
+     * @return     { description_of_the_return_value }
      */
     Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
     }
     private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * current node.
+         */
         private Node<Item> current;
-        public ListIterator(Node<Item> first) {
+        /**
+         * Constructs the object.
+         *
+         * @param      first  The first
+         */
+        public ListIterator(final Node<Item> first) {
             current = first;
         }
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
         public boolean hasNext() {
             return current != null;
         }
+        /**
+         * removes an element.
+         */
         public void remove() {
             throw new UnsupportedOperationException();
         }
+        /**
+         * moves the pointer ahead by one memory spcace.
+         *
+         * @return     { new item }
+         */
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
