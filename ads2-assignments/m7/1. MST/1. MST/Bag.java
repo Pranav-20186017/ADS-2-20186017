@@ -70,7 +70,7 @@ public class Bag<Item> implements Iterable<Item> {
      * the items in this bag in arbitrary order
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator<Item>(first);
     }
     /**
      * Class for list iterator.
@@ -78,16 +78,32 @@ public class Bag<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * current node.
+         */
         private Node<Item> current;
-        public ListIterator(Node<Item> first) {
+        ListIterator(Node<Item> first) {
             current = first;
         }
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
         public boolean hasNext() { 
             return current != null;
         }
+        /**
+         * removes and element.
+         */
         public void remove() { 
             throw new UnsupportedOperationException();
         }
+        /**
+         * moves the cursor ahead by one.
+         *
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;

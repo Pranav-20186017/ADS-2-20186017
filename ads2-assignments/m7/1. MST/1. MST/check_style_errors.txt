@@ -1,20 +1,14 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:73: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:81:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:82:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:82:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:82:29: Parameter first should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:82:40: 'first' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:85: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:85:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:88: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:88:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:91:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:92: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:94: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:85:22: Parameter first should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:85:33: 'first' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:93: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:99: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:108: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Bag.java:110: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Edge.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Edge.java:13: Line has trailing spaces. [RegexpSingleline]
