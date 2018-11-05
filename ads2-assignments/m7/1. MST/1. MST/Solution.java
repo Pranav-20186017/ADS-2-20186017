@@ -18,13 +18,15 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         int vertices = sc.nextInt();
         int edges = sc.nextInt();
+        int v,w;
+        double weight;
         EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertices, edges);
         while(sc.hasNext()) {
             String line = sc.nextLine();
             String[] tokens = line.split(" ");
-            int v = Integer.parseInt(tokens[0]);
-            int w = Integer.parseInt(tokens[1]);
-            double weight = Double.parseDouble(tokens[2]);
+            v = Integer.parseInt(tokens[0]);
+            w = Integer.parseInt(tokens[1]);
+            weight = Double.parseDouble(tokens[2]);
             ewg.addEdge(new Edge(v, w, weight));
             KruskalMST kmst = new KruskalMST(ewg);
             System.out.format("%.5f",kmst.weight());
