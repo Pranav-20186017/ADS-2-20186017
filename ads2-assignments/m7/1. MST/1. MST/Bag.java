@@ -20,7 +20,13 @@ public class Bag<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private static class Node<Item> {
+        /**
+         * item in the bag.
+         */
         private Item item;
+        /**
+         * pointer towards next node.
+         */
         private Node<Item> next;
     }
     /**
@@ -52,7 +58,7 @@ public class Bag<Item> implements Iterable<Item> {
      *
      * @param  item the item to add to this bag
      */
-    public void add(Item item) {
+    public void add(final Item item) {
         Node<Item> oldfirst = first;
         first = new Node<Item>();
         first.item = item;
