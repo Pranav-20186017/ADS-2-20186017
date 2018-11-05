@@ -82,13 +82,18 @@ public class Bag<Item> implements Iterable<Item> {
          * current node.
          */
         private Node<Item> current;
-        ListIterator(Node<Item> first) {
-            current = first;
+        /**
+         * Constructs the object.
+         *
+         * @param      first  The first
+         */
+        ListIterator(Node<Item> firstitem) {
+            this.current = firstitem;
         }
         /**
          * Determines if it has next.
          *
-         * @return     True if has next, False otherwise.
+         * @return True if has next, False otherwise.
          */
         public boolean hasNext() { 
             return current != null;
@@ -105,7 +110,9 @@ public class Bag<Item> implements Iterable<Item> {
          * @return     { description_of_the_return_value }
          */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next; 
             return item;
