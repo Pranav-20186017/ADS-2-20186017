@@ -23,7 +23,7 @@ final class UF {
      * @param  n the number of sites
      * @throws IllegalArgumentException if {@code n < 0}
      */
-    public UF(final int n) {
+    protected UF(final int n) {
         if (n < 0) {
             throw new IllegalArgumentException();
         }
