@@ -1,0 +1,9 @@
+Suppose there are two minimum trees, A and B. 
+Let e be the edge in just one of A,B with the smallest cost. 
+Suppose it is in A but not B. Suppose e is the edge PQ. 
+Then B must contain a path from P to Q which is not simply the edge e. 
+So if we add e to B, then we get a cycle. If all the other edges in the cycle were in A, then A would contain a cycle, which it cannot. 
+So the cycle must contain an edge f not in A. Hence, by the definition of e (and the fact that all edge-costs are different) the cost of f must be greater than the cost of e. 
+So if we replace f by e we get a spanning tree with smaller total cost. 
+Which is a Contradiction.
+Hence if a graph's edges all have distinct weights, the MST is unique.
