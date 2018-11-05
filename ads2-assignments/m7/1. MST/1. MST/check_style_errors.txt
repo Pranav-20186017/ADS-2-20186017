@@ -400,11 +400,9 @@ Audit done.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:115: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:125:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:125:46: 'first' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:152: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\Stack.java:125:39: 'first' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\StdOut.java:18: Line is longer than 80 characters (found 106). [LineLength]
