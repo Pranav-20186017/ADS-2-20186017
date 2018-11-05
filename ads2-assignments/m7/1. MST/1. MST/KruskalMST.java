@@ -17,7 +17,7 @@ final class KruskalMST {
     /**
      * Compute a minimum spanning tree (or forest)
      * of an edge-weighted graph.
-     * @param G the edge-weighted graph
+     * @param graph the edge-weighted graph
      */
     protected KruskalMST(final EdgeWeightedGraph graph) {
         // more efficient to build heap by passing array of edges
@@ -56,8 +56,14 @@ final class KruskalMST {
     public double weight() {
         return weight;
     }
-    // check optimality conditions (takes time proportional to E V lg* V)
-    private boolean check(EdgeWeightedGraph G) {
+    /**
+     * check for log*V
+     *
+     * @param      graph     { graph object }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private boolean check(EdgeWeightedGraph graph) {
         // check total weight
         double total = 0.0;
         for (Edge e : edges()) {
@@ -67,7 +73,7 @@ final class KruskalMST {
             return false;
         }
         // check that it is acyclic
-        UF uf = new UF(G.V());
+        UF uf = new UF(graph.V());
         for (Edge e : edges()) {
             int v = e.either(), w = e.other(v);
             if (uf.connected(v, w)) {
@@ -77,7 +83,7 @@ final class KruskalMST {
             uf.union(v, w);
         }
         // check that it is a spanning forest
-        for (Edge e : G.edges()) {
+        for (Edge e : graph.edges()) {
             int v = e.either(), w = e.other(v);
             if (!uf.connected(v, w)) {
                 System.err.println("Not a spanning forest");
@@ -87,7 +93,7 @@ final class KruskalMST {
         // check that it is a minimal spanning forest (cut optimality conditions)
         for (Edge e : edges()) {
             // all edges in MST except e
-            uf = new UF(G.V());
+            uf = new UF(graph.V());
             for (Edge f : mst) {
                 int x = f.either(), y = f.other(x);
                 if (f != e) {
@@ -95,7 +101,7 @@ final class KruskalMST {
                 }
             }
             // check that e is min weight edge in crossing cut
-            for (Edge f : G.edges()) {
+            for (Edge f : graph.edges()) {
                 int x = f.either(), y = f.other(x);
                 if (!uf.connected(x, y)) {
                     if (f.weight() < e.weight()) {
