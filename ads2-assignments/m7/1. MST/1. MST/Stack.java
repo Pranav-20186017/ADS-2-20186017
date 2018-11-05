@@ -14,7 +14,10 @@ public class Stack<Item> implements Iterable<Item> {
      * size of the stack.
      */
     private int n;                // size of the stack
-    // helper linked list class
+    /**
+     * Class for linked list.
+     * @param      <Item>  The item
+     */
     private static class Node<Item> {
         private Item item;
         private Node<Item> next;
@@ -61,7 +64,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item pop() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Stack underflow");
+        }
         Item item = first.item;        // save item to return
         first = first.next;            // delete first node
         n--;
@@ -74,7 +79,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Stack underflow");
+        }
         return first.item;
     }
     /**
@@ -95,11 +102,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @return an iterator to this stack that.
      * iterates through the items in LIFO order
      */
-    public Iterator<Item> iterator() {
+    Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
     }
-
-    // an iterator, doesn't implement remove() since it's optional
     private class ListIterator<Item> implements Iterator<Item> {
         private Node<Item> current;
         public ListIterator(Node<Item> first) {
