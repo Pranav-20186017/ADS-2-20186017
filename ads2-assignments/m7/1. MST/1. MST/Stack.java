@@ -127,8 +127,8 @@ public class Stack<Item> implements Iterable<Item> {
          *
          * @param      current  The first
          */
-        ListIterator(final Node<Item> current) {
-            this.current = current;
+        ListIterator(final Node<Item> first) {
+            this.current = first;
         }
         /**
          * Determines if it has next.
