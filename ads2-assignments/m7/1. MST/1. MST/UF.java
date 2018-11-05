@@ -61,15 +61,12 @@ final class UF {
         return count;
     }
     /**
-     * Returns true if the the two sites are in the same component.
+     * checks connectivity of p and q.
      *
-     * @param  p the integer representing one site
-     * @param  q the integer representing the other site
-     * @return {@code true} if the two sites 
-     * {@code p} and {@code q} are in the same component;
-     * {@code false} otherwise
-     * @throws IllegalArgumentException unless
-     *         both {@code 0 <= p < n} and {@code 0 <= q < n}
+     * @param      p     { parameter_description }
+     * @param      q     The quarter
+     *
+     * @return     { description_of_the_return_value }
      */
     public boolean connected(final int p, final int q) {
         return find(p) == find(q);
