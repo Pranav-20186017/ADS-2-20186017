@@ -271,12 +271,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 143 errors.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\KruskalMST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\KruskalMST.java:59: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\KruskalMST.java:66:27: Parameter graph should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\KruskalMST.java:93: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 4 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\MinPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m7\1. MST\1. MST\MinPQ.java:14: Line is longer than 80 characters (found 89). [LineLength]

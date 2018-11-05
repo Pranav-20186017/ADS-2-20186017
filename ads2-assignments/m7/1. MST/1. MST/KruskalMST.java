@@ -57,13 +57,13 @@ final class KruskalMST {
         return weight;
     }
     /**
-     * check for log*V
+     * check for log*V.
      *
      * @param      graph     { graph object }
      *
      * @return     { description_of_the_return_value }
      */
-    private boolean check(EdgeWeightedGraph graph) {
+    private boolean check(final EdgeWeightedGraph graph) {
         // check total weight
         double total = 0.0;
         for (Edge e : edges()) {
@@ -90,7 +90,6 @@ final class KruskalMST {
                 return false;
             }
         }
-        // check that it is a minimal spanning forest (cut optimality conditions)
         for (Edge e : edges()) {
             // all edges in MST except e
             uf = new UF(graph.V());
