@@ -85,9 +85,9 @@ public class Bag<Item> implements Iterable<Item> {
         /**
          * Constructs the object.
          *
-         * @param      first  The first
+         * @param      firstitem  The first item.
          */
-        ListIterator(Node<Item> firstitem) {
+        ListIterator(final Node<Item> firstitem) {
             this.current = firstitem;
         }
         /**
@@ -95,13 +95,13 @@ public class Bag<Item> implements Iterable<Item> {
          *
          * @return True if has next, False otherwise.
          */
-        public boolean hasNext() { 
+        public boolean hasNext() {
             return current != null;
         }
         /**
          * removes and element.
          */
-        public void remove() { 
+        public void remove() {
             throw new UnsupportedOperationException();
         }
         /**
@@ -114,7 +114,7 @@ public class Bag<Item> implements Iterable<Item> {
                 throw new NoSuchElementException();
             }
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
