@@ -9,26 +9,18 @@ final class Solution {
     private Solution() {
         //unused.
     }
-    /**
-     * main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vertices = sc.nextInt();
-        int edges = sc.nextInt();
-        EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertices, edges);
-        while(sc.hasNext()) {
-            String line = sc.nextLine();
-            String[] tokens = line.split(" ");
+        int vertices = Integer.parseInt(sc.nextLine());
+        int edges = Integer.parseInt(sc.nextLine());
+        EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertices);
+        while (sc.hasNext()) {
+            String[] tokens = sc.nextLine().split(" ");
             ewg.addEdge(new Edge(Integer.parseInt(tokens[0]),
                 Integer.parseInt(tokens[1]),
                 Double.parseDouble(tokens[2])));
-            KruskalMST kmst = new KruskalMST(ewg);
-            System.out.format("%.5f",kmst.weight());
         }
-        
+        KruskalMST kmst = new KruskalMST(ewg);
+        System.out.format("%.5f", kmst.weight());
     }
-
 }
