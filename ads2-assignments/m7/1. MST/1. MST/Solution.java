@@ -9,7 +9,12 @@ final class Solution {
     private Solution() {
         //unused.
     }
-    public static void main(String[] args) {
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int vertices = Integer.parseInt(sc.nextLine());
         int edges = Integer.parseInt(sc.nextLine());
