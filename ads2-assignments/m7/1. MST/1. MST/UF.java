@@ -1,9 +1,19 @@
 /**
  * Class for uf.
  */
-public class UF {
+final class UF {
+
+    /**
+     * parent node.
+     */
     private int[] parent;  // parent[i] = parent of i
+    /**
+     * rank.
+     */
     private byte[] rank;   // rank[i] = rank of subtree rooted at i
+    /**
+     * count.
+     */
     private int count;     // number of components
     /**
      * Initializes an empty union–find data structure with {@code n} sites
@@ -14,7 +24,9 @@ public class UF {
      * @throws IllegalArgumentException if {@code n < 0}
      */
     public UF(final int n) {
-        if (n < 0) throw new IllegalArgumentException();
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
         count = n;
         parent = new int[n];
         rank = new byte[n];
@@ -24,7 +36,7 @@ public class UF {
         }
     }
     /**
-     * Returns the component identifier for 
+     * Returns the component identifier for
      * the component containing site {@code p}.
      * @param  q the integer representing one site
      * @return the component identifier for the
@@ -41,14 +53,13 @@ public class UF {
         return p;
     }
     /**
-     * Returns the number of components.a
+     * Returns the number of components.
      * @return the number of components
      * (between {@code 1} and {@code n})
      */
     public int count() {
         return count;
     }
-  
     /**
      * Returns true if the the two sites are in the same component.
      *
@@ -60,12 +71,11 @@ public class UF {
      * @throws IllegalArgumentException unless
      *         both {@code 0 <= p < n} and {@code 0 <= q < n}
      */
-    public boolean connected(int p, int q) {
+    public boolean connected(final int p, final int q) {
         return find(p) == find(q);
     }
-  
     /**
-     * Merges the component containing site {@code p} with the 
+     * Merges the component containing site {@code p} with the
      * the component containing site {@code q}.
      *
      * @param  p the integer representing one site
@@ -76,7 +86,9 @@ public class UF {
     public void union(final int p, final int q) {
         int rootP = find(p);
         int rootQ = find(q);
-        if (rootP == rootQ) return;
+        if (rootP == rootQ) {
+            return;
+        }
         // make root of smaller rank point to root of larger rank
         if (rank[rootP] < rank[rootQ]) {
             parent[rootP] = rootQ;
