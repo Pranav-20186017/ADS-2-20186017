@@ -73,8 +73,8 @@ class PageRank {
             crval[v] = 0.0;
             return crval[v];
         }
-        for (Integer eachadj : digraph.reverse().adj(v)) {
-            rank = rank + (prval[eachadj] / digraph.outdegree(eachadj));
+        for (Integer itr : digraph.reverse().adj(v)) {
+            rank = rank + (prval[itr] / digraph.outdegree(itr));
         }
         crval[v] = rank;
         return crval[v];
