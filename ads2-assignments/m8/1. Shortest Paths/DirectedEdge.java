@@ -17,9 +17,9 @@ public class DirectedEdge {
     /**
      * Initializes a directed edge from vertex {@code v} to vertex {@code w}
      * the given {@code weight}.
-     * @param v the tail vertex
-     * @param w the head vertex
-     * @param weight the weight of the directed edge
+     * @param source the tail vertex
+     * @param destination the head vertex
+     * @param heavy the weight of the directed edge
      * @throws IllegalArgumentException if either {@code v} or {@code w}
      *    is a negative integer
      * @throws IllegalArgumentException if {@code weight} is {@code NaN}
