@@ -1,8 +1,19 @@
+/**
+ * Class for directed edge.
+ */
 public class DirectedEdge { 
+    /**
+     * vertex v.
+     */
     private final int v;
+    /**
+     * vertex w.
+     */
     private final int w;
+    /**
+     * weight of the edge.
+     */
     private final double weight;
-
     /**
      * Initializes a directed edge from vertex {@code v} to vertex {@code w} with
      * the given {@code weight}.
@@ -14,14 +25,10 @@ public class DirectedEdge {
      * @throws IllegalArgumentException if {@code weight} is {@code NaN}
      */
     public DirectedEdge(int v, int w, double weight) {
-        if (v < 0) throw new IllegalArgumentException("Vertex names must be nonnegative integers");
-        if (w < 0) throw new IllegalArgumentException("Vertex names must be nonnegative integers");
-        if (Double.isNaN(weight)) throw new IllegalArgumentException("Weight is NaN");
         this.v = v;
         this.w = w;
         this.weight = weight;
     }
-
     /**
      * Returns the tail vertex of the directed edge.
      * @return the tail vertex of the directed edge
@@ -29,7 +36,6 @@ public class DirectedEdge {
     public int from() {
         return v;
     }
-
     /**
      * Returns the head vertex of the directed edge.
      * @return the head vertex of the directed edge
@@ -37,7 +43,6 @@ public class DirectedEdge {
     public int to() {
         return w;
     }
-
     /**
      * Returns the weight of the directed edge.
      * @return the weight of the directed edge
@@ -45,7 +50,6 @@ public class DirectedEdge {
     public double weight() {
         return weight;
     }
-
     /**
      * Returns a string representation of the directed edge.
      * @return a string representation of the directed edge
