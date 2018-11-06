@@ -218,14 +218,7 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:13:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:24: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:27: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:28: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:29: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:30: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:39: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:39:50: 'typecast' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:45: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Solution.java:45:30: 'typecast' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 3 errors.
