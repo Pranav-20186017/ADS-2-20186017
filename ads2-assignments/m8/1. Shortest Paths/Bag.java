@@ -36,7 +36,6 @@ public class Bag<Item> implements Iterable<Item> {
         first = null;
         n = 0;
     }
-
     /**
      * Determines if empty.
      * its complexity is O(1).
