@@ -42,7 +42,7 @@ final class Solution {
             String[] query = sc.nextLine().split(" ");
             DijkstraSP dijkobj = new DijkstraSP(ewdg,
             station.indexOf(query[zero]));
-            long ans = (long)dijkobj.distTo(station.indexOf(query[one])); 
+            long ans = (long) dijkobj.distTo(station.indexOf(query[one]));
             System.out.println(ans);
         }
     }
