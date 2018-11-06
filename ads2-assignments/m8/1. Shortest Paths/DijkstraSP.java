@@ -35,11 +35,9 @@ public class DijkstraSP {
             for (DirectedEdge e : G.adj(v))
                 relax(e);
         }
-
         // check optimality conditions
         assert check(G, s);
     }
-
     // relax edge e and update pq if changed
     private void relax(DirectedEdge e) {
         int v = e.from(), w = e.to();
