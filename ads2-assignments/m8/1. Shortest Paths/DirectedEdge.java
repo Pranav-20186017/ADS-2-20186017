@@ -24,7 +24,8 @@ public class DirectedEdge {
      *    is a negative integer
      * @throws IllegalArgumentException if {@code weight} is {@code NaN}
      */
-    public DirectedEdge(final int source, final int destination, final double heavy) {
+    public DirectedEdge(final int source,
+    	final int destination, final double heavy) {
         this.v = source;
         this.w = destination;
         this.weight = heavy;

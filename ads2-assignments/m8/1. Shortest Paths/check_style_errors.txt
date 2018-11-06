@@ -47,10 +47,9 @@ Starting audit...
 Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\DirectedEdge.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\DirectedEdge.java:27: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\DirectedEdge.java:28:5: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\EdgeWeightedDigraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\EdgeWeightedDigraph.java:1: Missing a Javadoc comment. [JavadocType]
