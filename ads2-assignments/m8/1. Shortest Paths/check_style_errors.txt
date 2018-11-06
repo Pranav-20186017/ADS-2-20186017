@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\DijkstraSP.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m8\1. Shortest Paths\DijkstraSP.java:2: Line is longer than 80 characters (found 84). [LineLength]
