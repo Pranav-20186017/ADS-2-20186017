@@ -36,11 +36,10 @@ public class Solution {
      *
      * @param      carver     The carver
      * @param      seam       The seam
-     * @param      direct  The direction
+     * @param      direction  The direction
      */
-    public static void printSeam(final SeamCarver carver,
-        final int[] seam, final boolean direct) {
-        boolean direction = direct;
+    public static void printSeam(SeamCarver carver,
+        int[] seam, boolean direction) {
         double totalSeamEnergy = 0.0;
         for (int row = 0; row < carver.height(); row++) {
             for (int col = 0; col < carver.width(); col++) {
