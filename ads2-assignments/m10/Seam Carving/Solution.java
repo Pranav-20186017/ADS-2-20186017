@@ -5,30 +5,22 @@ import java.util.Arrays;
  */
 public class Solution {
     /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //unused.
-    }
-    /**
      * prints the energy matrix of the pixels.
      *
      * @param      fileName  The file name
      */
     public static void printEnergies(String fileName) {
         Picture picture = new Picture(fileName);
-        StdOut.printf("image is %d pixels"
-            + "wide by %d pixels high.\n", picture.width(), picture.height());
+        StdOut.printf("image is %d pixels wide by %d pixels high.\n", picture.width(), picture.height());
 
         SeamCarver sc = new SeamCarver(picture);
 
         StdOut.printf("Printing energy calculated for each pixel.\n");
 
         for (int row = 0; row < sc.height(); row++) {
-            for (int col = 0; col < sc.width(); col++) {
+            for (int col = 0; col < sc.width(); col++)
                 StdOut.printf("%9.0f ", sc.energy(col, row));
             StdOut.println();
-            }
         }
     }
     /**
@@ -38,9 +30,9 @@ public class Solution {
      * @param      seam       The seam
      * @param      direction  The direction
      */
-    public static void printSeam(SeamCarver carver,
-        int[] seam, boolean direction) {
+    public static void printSeam(SeamCarver carver, int[] seam, boolean direction) {
         double totalSeamEnergy = 0.0;
+
         for (int row = 0; row < carver.height(); row++) {
             for (int col = 0; col < carver.width(); col++) {
                 double energy = carver.energy(col, row);
