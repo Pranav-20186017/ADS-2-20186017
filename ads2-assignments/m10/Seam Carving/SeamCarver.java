@@ -32,7 +32,7 @@ public class SeamCarver {
                 if (((i == 0) || (j == 0)) || ((i == (height - 1)) || (j == (width - 1)))) {
                     energyvals[i][j] = 1000;
                 } else {
-                    color1 = picture.get(j+1, i);
+                    color1 = picture.get(j + 1, i);
                     color2 = picture.get(j - 1, i);
                     x += Math.pow((color1.getRed() - color2.getRed()), 2);
                     x += Math.pow((color1.getGreen() - color2.getGreen()), 2);
@@ -103,7 +103,7 @@ public class SeamCarver {
      *
      * @param      seam  The seam
      */
-    public void removeHorizontalSeam(int[] seam) {
+    public void removeHorizontalSeam(final int[] seam) {
 
     }
     /**
@@ -111,7 +111,7 @@ public class SeamCarver {
      *
      * @param      seam  The seam
      */
-    public void removeVerticalSeam(int[] seam) {
+    public void removeVerticalSeam(final int[] seam) {
 
     }
 }
