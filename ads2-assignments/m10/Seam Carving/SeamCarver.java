@@ -6,6 +6,10 @@ public class SeamCarver {
     private Picture picture;
     private double[][] energyvals;
     public SeamCarver(Picture pic1) {
+        if (pic1 == null) {
+            System.out.println("picture is null");
+            return;
+        }
         width = pic1.width();
         height = pic1.height();
         picture = pic1;
