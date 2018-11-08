@@ -16,7 +16,7 @@ final class ShowSeams {
     private ShowSeams() {
         //unused.
     }
-    private static void showHorizontalSeam(SeamCarver sc) {
+    private static void showHorizontalSeam(final SeamCarver sc) {
         Picture picture = SCUtility.toEnergyPicture(sc);
         int[] horizontalSeam = sc.findHorizontalSeam();
         Picture overlay = SCUtility.seamOverlay(picture, true, horizontalSeam);
@@ -28,7 +28,12 @@ final class ShowSeams {
         Picture overlay = SCUtility.seamOverlay(picture, false, verticalSeam);
         overlay.show();
     }
-    public static void main(String[] args) {
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Picture picture = new Picture(args[0]);
         StdOut.printf("image is %d columns by %d rows\n",
             picture.width(), picture.height());
