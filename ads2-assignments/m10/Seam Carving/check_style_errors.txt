@@ -226,11 +226,7 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:38:42: Parameter sc should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:53: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\Solution.java:6:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]

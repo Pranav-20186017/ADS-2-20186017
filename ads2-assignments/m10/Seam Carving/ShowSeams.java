@@ -35,7 +35,7 @@ final class ShowSeams {
      *
      * @param      sc    The screen
      */
-    private static void showVerticalSeam(SeamCarver sc) {
+    private static void showVerticalSeam(final SeamCarver sc) {
         Picture picture = SCUtility.toEnergyPicture(sc);
         int[] verticalSeam = sc.findVerticalSeam();
         Picture overlay = SCUtility.seamOverlay(picture, false, verticalSeam);
@@ -50,7 +50,7 @@ final class ShowSeams {
         Picture picture = new Picture(args[0]);
         StdOut.printf("image is %d columns by %d rows\n",
             picture.width(), picture.height());
-        picture.show();        
+        picture.show();
         SeamCarver sc = new SeamCarver(picture);
         StdOut.printf("Displaying horizontal seam calculated.\n");
         showHorizontalSeam(sc);
@@ -58,5 +58,4 @@ final class ShowSeams {
         showVerticalSeam(sc);
 
     }
-
 }
