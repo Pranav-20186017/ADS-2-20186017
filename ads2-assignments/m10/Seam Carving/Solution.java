@@ -42,7 +42,7 @@ public class Solution {
                 double energy = carver.energy(col, row);
                 String marker = " ";
                 if ((direction == true && row == seam[col])
-                        || (direction == false   && col == seam[row])) {
+                        || (!direction  && col == seam[row])) {
                     marker = "*";
                     totalSeamEnergy += energy;
                 }
