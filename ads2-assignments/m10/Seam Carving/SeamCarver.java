@@ -14,6 +14,7 @@ public class SeamCarver {
      * @param      pic1  The picture 1
      */
     public SeamCarver(final Picture pic1) {
+        final int thousand = 1000;
         if (pic1 == null) {
             System.out.println("picture is null");
             return;
@@ -30,14 +31,14 @@ public class SeamCarver {
                 x = 0;
                 y = 0;
                 if (((i == 0) || (j == 0)) || ((i == (height - 1)) || (j == (width - 1)))) {
-                    energyvals[i][j] = 1000;
+                    energyvals[i][j] = thousand;
                 } else {
                     color1 = picture.get(j + 1, i);
                     color2 = picture.get(j - 1, i);
                     x += Math.pow((color1.getRed() - color2.getRed()), 2);
                     x += Math.pow((color1.getGreen() - color2.getGreen()), 2);
                     x += Math.pow((color1.getBlue() - color2.getBlue()), 2);
-                    color1 = picture.get(j, i +1);
+                    color1 = picture.get(j, i + 1);
                     color2 = picture.get(j, i - 1);
                     y += Math.pow((color1.getRed() - color2.getRed()), 2);
                     y += Math.pow((color1.getGreen() - color2.getGreen()), 2);
