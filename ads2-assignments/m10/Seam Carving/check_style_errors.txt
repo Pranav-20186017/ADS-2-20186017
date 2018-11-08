@@ -227,7 +227,7 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:8:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:9:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:10:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:33: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:33:44: '||' should be on a new line. [OperatorWrap]
 Audit done.
 Checkstyle ends with 6 errors.
 Starting audit...
