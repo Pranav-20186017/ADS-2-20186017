@@ -4,12 +4,12 @@ import java.util.Arrays;
  * Class for solution.
  */
 public class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//unused.
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
     /**
      * prints the energy matrix of the pixels.
      *
@@ -18,7 +18,7 @@ public class Solution {
     public static void printEnergies(final String fileName) {
         Picture picture = new Picture(fileName);
         StdOut.printf("image is %d pixels wide by %d pixels high.\n",
-        	picture.width(), picture.height());
+            picture.width(), picture.height());
         SeamCarver sc = new SeamCarver(picture);
         StdOut.printf("Printing energy calculated for each pixel.\n");
         for (int row = 0; row < sc.height(); row++) {
@@ -41,8 +41,8 @@ public class Solution {
             for (int col = 0; col < carver.width(); col++) {
                 double energy = carver.energy(col, row);
                 String marker = " ";
-                if ((direction == true && row == seam[col]) ||
-                        (direction == false   && col == seam[row])) {
+                if ((direction == true && row == seam[col])
+                        || (direction == false   && col == seam[row])) {
                     marker = "*";
                     totalSeamEnergy += energy;
                 }
@@ -90,7 +90,8 @@ public class Solution {
                 while (scan.hasNextLine()) {
                     String file = scan.nextLine();
                     seamCarver = new SeamCarver(new Picture("/Files/" + file));
-                    System.out.println(Arrays.toString(seamCarver.findVerticalSeam()));
+                    System.out.println(
+                        Arrays.toString(seamCarver.findVerticalSeam()));
                 }
                 break;
             case "findHorizontalSeam":
