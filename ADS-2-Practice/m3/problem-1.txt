@@ -1,0 +1,10 @@
+If parallel edges are not allowed in a diagraph (i.e. if edge a -> b exists, then b - > a is not allowed), the maximum number of edges would be simple (VC2) or (V*(V-1))/2
+
+
+
+ the n vertex graph with the maximal number of edges that is still disconnected is a Kn−1 with an additional isolated vertex. Hence, as you correctly calculate, there are (n2)=(n−1)(n−2)2 edges.
+
+Adding any possible edge must connect the graph, so the minimum number of edges needed to guarantee connectivity for an n vertex graph is (n−1)(n−2)2+1.
+
+it's not possible for a simple, undirected graph to even have n(n−1)2+1 edges (there can only be at most (n2)=n(n−1)2 edges).
+
