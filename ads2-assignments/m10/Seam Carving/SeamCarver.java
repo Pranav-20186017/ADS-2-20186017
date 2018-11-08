@@ -3,10 +3,21 @@ import java.awt.Color;
  * Class for seam carver.
  */
 public class SeamCarver {
-    // create a seam carver object based on the given picture
+    /**
+     * width of the picture.
+     */
     private int width;
+    /**
+     * height of the picture.
+     */
     private int height;
+    /**
+     * object for picture.
+     */
     private Picture picture;
+    /**
+     * array for energy values of pixels.
+     */
     private double[][] energyvals;
     /**
      * Constructs the object.
