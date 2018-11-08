@@ -98,7 +98,8 @@ public class Solution {
                 while (scan.hasNextLine()) {
                     String file = scan.nextLine();
                     seamCarver = new SeamCarver(new Picture("/Files/" + file));
-                    System.out.println(Arrays.toString(seamCarver.findHorizontalSeam()));
+                    System.out.println(Arrays.toString(
+                        seamCarver.findHorizontalSeam()));
                 }
                 break;
             case "removeVerticalSeam":
@@ -114,7 +115,8 @@ public class Solution {
                 while (scan.hasNextLine()) {
                     String file = scan.nextLine();
                     seamCarver = new SeamCarver(new Picture("/Files/" + file));
-                    seamCarver.removeHorizontalSeam(seamCarver.findHorizontalSeam());
+                    seamCarver.removeHorizontalSeam(
+                        seamCarver.findHorizontalSeam());
                     int[] horizontalSeam = seamCarver.findHorizontalSeam();
                     seamCarver.removeHorizontalSeam(horizontalSeam);
                     printSeam(seamCarver, horizontalSeam, true);
