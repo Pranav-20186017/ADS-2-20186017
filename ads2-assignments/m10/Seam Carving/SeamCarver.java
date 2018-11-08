@@ -13,7 +13,7 @@ public class SeamCarver {
      *
      * @param      pic1  The picture 1
      */
-    public SeamCarver(Picture pic1) {
+    public SeamCarver(final Picture pic1) {
         if (pic1 == null) {
             System.out.println("picture is null");
             return;
@@ -79,7 +79,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    public double energy(int x, int y) {
+    public double energy(final int x, final int y) {
         return energyvals[y][x];
     }
     /**
