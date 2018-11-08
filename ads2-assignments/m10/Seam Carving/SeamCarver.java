@@ -30,8 +30,8 @@ public class SeamCarver {
             for (int j = 0; j < width; j++) {
                 x = 0;
                 y = 0;
-                if (((i == 0) || (j == 0)) ||
-                    ((i == (height - 1)) || (j == (width - 1)))) {
+                if (((i == 0) || (j == 0))
+                    || ((i == (height - 1)) || (j == (width - 1)))) {
                     energyvals[i][j] = thousand;
                 } else {
                     color1 = picture.get(j + 1, i);
