@@ -227,20 +227,17 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:6: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:15: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:15:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:17:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:17:44: Parameter sc should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:5: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:16:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:19:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:19:44: Parameter sc should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:25:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:25:42: Parameter sc should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:32:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:32:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:34: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:31:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:31:29: Parameter args should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:35: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\ShowSeams.java:37: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 10 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\Solution.java:6:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
