@@ -18,7 +18,7 @@ public class Solution {
     public static void printEnergies(String fileName) {
         Picture picture = new Picture(fileName);
         StdOut.printf("image is %d pixels"
-            +"wide by %d pixels high.\n", picture.width(), picture.height());
+            + "wide by %d pixels high.\n", picture.width(), picture.height());
 
         SeamCarver sc = new SeamCarver(picture);
 
@@ -36,11 +36,12 @@ public class Solution {
      *
      * @param      carver     The carver
      * @param      seam       The seam
-     * @param      direction  The direction
+     * @param      direct  The direction
      */
-    public static void printSeam(SeamCarver carver, int[] seam, boolean direction) {
+    public static void printSeam(final SeamCarver carver,
+        final int[] seam, final boolean direct) {
+        boolean direction = direct;
         double totalSeamEnergy = 0.0;
-
         for (int row = 0; row < carver.height(); row++) {
             for (int col = 0; col < carver.width(); col++) {
                 double energy = carver.energy(col, row);
