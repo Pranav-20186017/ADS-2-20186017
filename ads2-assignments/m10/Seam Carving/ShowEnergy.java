@@ -15,6 +15,12 @@ import edu.princeton.cs.algs4.StdOut;
  */
 public class ShowEnergy {
     /**
+     * Constructs the object.
+     */
+    private ShowEnergy() {
+        //unused.
+    }
+    /**
      * main method.
      *
      * @param      args  The arguments
@@ -25,10 +31,7 @@ public class ShowEnergy {
             picture.width(), picture.height());
         picture.show();        
         SeamCarver sc = new SeamCarver(picture);
-        
         StdOut.printf("Displaying energy calculated for each pixel.\n");
         SCUtility.showEnergy(sc);
-
     }
-
 }
