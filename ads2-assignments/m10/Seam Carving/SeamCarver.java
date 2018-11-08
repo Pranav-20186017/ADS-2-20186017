@@ -24,9 +24,9 @@ public class SeamCarver {
         energyvals = new double[height][width];
         int x = 0;
         int y = 0;
-        Color color1,color2;
-        for (int i = 0; i< height;i++){
-            for (int j = 0; j < width; j++){
+        Color color1, color2;
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 x = 0;
                 y = 0;
                 if (((i==0)||(j==0))||((i==(height-1))||(j==(width-1)))){
