@@ -148,9 +148,4 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:8: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:22:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:23:9: Missing a Javadoc comment. [JavadocVariable]
 Audit done.
-Checkstyle ends with 4 errors.

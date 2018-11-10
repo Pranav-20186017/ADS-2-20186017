@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
  */
 public class Stack<Item> implements Iterable<Item> {
     /**
-     * first node
+     * first node.
      */
     private Node<Item> first;     // top of stack
     /**
@@ -19,7 +19,13 @@ public class Stack<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private static class Node<Item> {
+        /**
+         * item in a node.
+         */
         private Item item;
+        /**
+         * pointer to next node in a Linked List.
+         */
         private Node<Item> next;
     }
     /**
