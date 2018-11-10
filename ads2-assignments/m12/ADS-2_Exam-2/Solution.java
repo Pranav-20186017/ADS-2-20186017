@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -73,7 +74,8 @@ final class Solution {
                 System.out.println(total);
                 String p1 = sht.pathTo(via).toString();
                 String p2 = nsht.pathTo(destination).toString();
-                System.out.println(p1 + p2);
+                String[] ans = (p1 + p2).split(" ");
+                Arrays.toString(ans);
             } else {
                 System.out.println("No Path Found.");
             }
