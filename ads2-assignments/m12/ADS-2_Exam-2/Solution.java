@@ -62,10 +62,10 @@ final class Solution {
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
-            String[] viaPaths = sc.nextLine().split(" ");
-            s = Integer.parseInt(viaPaths[0]);
-            int via = Integer.parseInt(viaPaths[1]);
-            d = Integer.parseInt(viaPaths[viaPaths.length - 1]);
+            String[] vpath = sc.nextLine().split(" ");
+            s = Integer.parseInt(vpath[0]);
+            int via = Integer.parseInt(vpath[1]);
+            d = Integer.parseInt(vpath[vpath.length - 1]);
             DijkstraUndirectedSP dsp
                 = new DijkstraUndirectedSP(ewg, s);
             if (dsp.hasPathTo(d)) {
