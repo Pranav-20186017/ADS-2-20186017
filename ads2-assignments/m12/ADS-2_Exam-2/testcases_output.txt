@@ -77,6 +77,6 @@ Expected Output:
 
 Your Output: 
 692.0
-[Ljava.lang.String;@5f2050f6
+2-52-40-40-71-7
 ----------------------------------------
 
