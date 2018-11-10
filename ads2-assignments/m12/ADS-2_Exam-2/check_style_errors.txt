@@ -144,18 +144,13 @@ Checkstyle ends with 59 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:79:54: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:79:55: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:83: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:83:58: '3' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:83:80: '5' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:83:89: '+' should be on a new line. [OperatorWrap]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:84:28: '6' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:84:50: '11' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:84:73: '12' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Queue.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
+Audit done.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m12\ADS-2_Exam-2\Stack.java:6: Line is longer than 80 characters (found 89). [LineLength]

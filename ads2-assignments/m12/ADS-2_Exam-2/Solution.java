@@ -62,26 +62,61 @@ final class Solution {
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
-            String[] vpath = sc.nextLine().split(" ");
-            int source = Integer.parseInt(vpath[0]);
-            int via = Integer.parseInt(vpath[1]);
-            int destination = Integer.parseInt(vpath[2]);
-            double total = 0.0;
-            DijkstraUndirectedSP sht = new DijkstraUndirectedSP(ewg, source);
-            DijkstraUndirectedSP nsht = new DijkstraUndirectedSP(ewg, via);
-            if (sht.hasPathTo(via) && nsht.hasPathTo(destination)) {
-                total += sht.distTo(via) + nsht.distTo(destination);
-                System.out.println(total);
-                String p1 = sht.pathTo(via).toString();
-                String p2 = nsht.pathTo(destination).toString();
-                String[] ans = (p1 + p2).split(" ");
-                String fin = "";
-                for (int i = 0; i < ans.length; i = i+2) {
-                    fin += ans[i];
+            String[] viaPaths = sc.nextLine().split(" ");
+            s = Integer.parseInt(viaPaths[0]);
+            int via = Integer.parseInt(viaPaths[1]);
+            d = Integer.parseInt(viaPaths[viaPaths.length - 1]);
+            DijkstraUndirectedSP dsp
+                = new DijkstraUndirectedSP(ewg, s);
+            if (dsp.hasPathTo(d)) {
+                Queue<Integer> que = new Queue<Integer>();
+                for (Edge e : dsp.pathTo(via)) {
+                    int ver = e.either();
+                    int other = e.other(ver);
+                    int v = 0;
+                    int w = 0;
+                    for (Integer j : que) {
+                        if (ver == j) {
+                            v = 1;
+                        }
+                        if (other == j) {
+                            w = 1;
+                        }
+
+                    }
+                    if (w == 0) {
+                        que.enqueue(other);
+                    }
+                    if (v == 0) {
+                        que.enqueue(ver);
+                    }
                 }
-                String paths = "";
-                paths = fin.charAt(2) + " " + fin.charAt(3) + " " + fin.charAt(5) + " " +
-                fin.charAt(6) + " " + fin.charAt(11) + " " + fin.charAt(12);
+                DijkstraUndirectedSP two
+                    = new DijkstraUndirectedSP(ewg, via);
+                for (Edge e : two.pathTo(d)) {
+                    int ver = e.either();
+                    int other = e.other(ver);
+                    int v = 0;
+                    int w = 0;
+                    for (Integer j : que) {
+                        if (ver == j) {
+                            v = 1;
+                        }
+                        if (other == j) {
+                            w = 1;
+                        }
+                    }
+                    if (v == 0) {
+                        que.enqueue(ver);
+                    }
+                    if (w == 0) {
+                        que.enqueue(other);
+                    }
+                }
+                System.out.println(dsp.distTo(via) + two.distTo(d));
+                while (!que.isEmpty()) {
+                    System.out.print(que.dequeue() + " ");
+                }
             } else {
                 System.out.println("No Path Found.");
             }
