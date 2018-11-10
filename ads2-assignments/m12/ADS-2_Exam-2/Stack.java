@@ -93,12 +93,12 @@ public class Stack<Item> implements Iterable<Item> {
         }
         return s.toString();
     }
-       
-
     /**
-     * Returns an iterator to this stack that iterates through the items in LIFO order.
+     * Returns an iterator to this stack that iterates
+     * through the items in LIFO order.
      *
-     * @return an iterator to this stack that iterates through the items in LIFO order
+     * @return an iterator
+     * to this stack that iterates through the items in LIFO order
      */
     public Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
@@ -113,6 +113,11 @@ public class Stack<Item> implements Iterable<Item> {
          * current node.
          */
         private Node<Item> current;
+        /**
+         * Constructs the object.
+         *
+         * @param      peak  The peak
+         */
         ListIterator(final Node<Item> peak) {
             current = peak;
         }
