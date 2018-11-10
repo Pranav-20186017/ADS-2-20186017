@@ -75,7 +75,7 @@ final class Solution {
                 String p1 = sht.pathTo(via).toString();
                 String p2 = nsht.pathTo(destination).toString();
                 String[] ans = (p1 + p2).split(" ");
-                Arrays.toString(ans);
+                System.out.println(ans);
             } else {
                 System.out.println("No Path Found.");
             }
