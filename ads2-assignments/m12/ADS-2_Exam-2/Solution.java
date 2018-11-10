@@ -1,7 +1,20 @@
 import java.util.Scanner;
-public class Solution {
-
-    public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
+    /**
+     * main method
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // Self loops are not allowed...
         // Parallel Edges are allowed...
         // Take the Graph input here...
@@ -19,7 +32,6 @@ public class Solution {
             ewg.addEdge(ed);
             count--;
         }
-
         String caseToGo = sc.nextLine();
         switch (caseToGo) {
         case "Graph":
@@ -59,7 +71,6 @@ public class Solution {
                 System.out.println("No Path Found.");
             }
             break;
-
         default:
             break;
         }
