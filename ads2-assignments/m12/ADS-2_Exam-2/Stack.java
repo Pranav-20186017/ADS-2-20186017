@@ -109,9 +109,12 @@ public class Stack<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * current node.
+         */
         private Node<Item> current;
-        public ListIterator(Node<Item> first) {
-            current = first;
+        ListIterator(final Node<Item> peak) {
+            current = peak;
         }
         /**
          * Determines if it has next.
