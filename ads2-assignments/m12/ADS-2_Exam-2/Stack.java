@@ -47,7 +47,7 @@ public class Stack<Item> implements Iterable<Item> {
      *
      * @param  item the item to add
      */
-    public void push(Item item) {
+    public void push(final Item item) {
         Node<Item> oldfirst = first;
         first = new Node<Item>();
         first.item = item;
@@ -61,7 +61,9 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item pop() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Stack underflow");
+        }
         Item item = first.item;        // save item to return
         first = first.next;            // delete first node
         n--;
@@ -76,14 +78,17 @@ public class Stack<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this stack is empty
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Stack underflow");
+        }
         return first.item;
     }
 
     /**
      * Returns a string representation of this stack.
      *
-     * @return the sequence of items in this stack in LIFO order, separated by spaces
+     * @return the sequence of
+     * items in this stack in LIFO order, separated by spaces
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
