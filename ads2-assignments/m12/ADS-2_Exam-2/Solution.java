@@ -65,9 +65,15 @@ final class Solution {
             int source = Integer.parseInt(vpath[0]);
             int via = Integer.parseInt(vpath[1]);
             int destination = Integer.parseInt(vpath[2]);
+            double total = 0.0;
             DijkstraUndirectedSP sht = new DijkstraUndirectedSP(ewg, source);
-            if (sht.hasPathTo(destination)) {
-                System.out.println(sht.distTo(destination));
+            DijkstraUndirectedSP nsht = new DijkstraUndirectedSP(ewg, via);
+            if (sht.hasPathTo(via)) {
+                total += sht.distTo(via);
+                if (nsht.hasPathTo(destination)) {
+                    total += nsht.distTo(destination);
+                }
+                System.out.println(total);
             } else {
                 System.out.println("No Path Found.");
             }
