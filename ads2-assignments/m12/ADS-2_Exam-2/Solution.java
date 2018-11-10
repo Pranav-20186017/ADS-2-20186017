@@ -68,11 +68,8 @@ final class Solution {
             double total = 0.0;
             DijkstraUndirectedSP sht = new DijkstraUndirectedSP(ewg, source);
             DijkstraUndirectedSP nsht = new DijkstraUndirectedSP(ewg, via);
-            if (sht.hasPathTo(via)) {
-                total += sht.distTo(via);
-                if (nsht.hasPathTo(destination)) {
-                    total += nsht.distTo(destination);
-                }
+            if (sht.hasPathTo(via) && nsht.hasPathTo(destination)) {
+                total += sht.distTo(via) + nsht.distTo(destination);
                 System.out.println(total);
             } else {
                 System.out.println("No Path Found.");
