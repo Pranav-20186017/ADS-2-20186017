@@ -71,6 +71,8 @@ final class Solution {
             if (sht.hasPathTo(via) && nsht.hasPathTo(destination)) {
                 total += sht.distTo(via) + nsht.distTo(destination);
                 System.out.println(total);
+                System.out.println(sht.pathTo(via));
+                System.out.println(nsht.pathTo(destination));
             } else {
                 System.out.println("No Path Found.");
             }
