@@ -52,6 +52,12 @@ public class Solution {
             int source = Integer.parseInt(vpath[0]);
             int via = Integer.parseInt(vpath[1]);
             int destination = Integer.parseInt(vpath[2]);
+            DijkstraUndirectedSP sht = new DijkstraUndirectedSP(ewg, source);
+            if (sht.hasPathTo(destination)) {
+                System.out.println(sht.distTo(destination));
+            } else {
+                System.out.println("No Path Found.");
+            }
             break;
 
         default:
