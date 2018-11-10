@@ -12,8 +12,10 @@ public class Solution {
         int count = edges;
         while (count > 0) {
             String[] tokens = sc.nextLine().split(" ");
-            Edge ed = new Edge(Integer.parseInt(tokens[0]),
-                               Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+            int v = Integer.parseInt(tokens[0]);
+            int w = Integer.parseInt(tokens[1]);
+            int cost = Integer.parseInt(tokens[2]);
+            Edge ed = new Edge(v, w, cost);
             ewg.addEdge(ed);
             count--;
         }
@@ -46,6 +48,10 @@ public class Solution {
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
+            String[] vpath = sc.nextLine().split(" ");
+            int source = Integer.parseInt(vpath[0]);
+            int via = Integer.parseInt(vpath[1]);
+            int destination = Integer.parseInt(vpath[2]);
             break;
 
         default:
