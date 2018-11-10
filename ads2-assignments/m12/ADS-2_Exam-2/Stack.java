@@ -5,8 +5,14 @@ import java.util.NoSuchElementException;
  *  @param <Item> the generic type of an item in this stack.
  */
 public class Stack<Item> implements Iterable<Item> {
+    /**
+     * first node
+     */
     private Node<Item> first;     // top of stack
-    private int n;                // size of the stack
+    /**
+     * size of the stack.
+     */
+    private int n;
     /**
      * Class for node.
      *
