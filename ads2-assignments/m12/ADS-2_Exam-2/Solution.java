@@ -41,7 +41,7 @@ final class Solution {
             break;
 
         case "DirectedPaths":
-            // Handle the case of DirectedPaths, where two integers are given.
+            // Handle the case of DirectedPaths, where nsht integers are given.
             // First is the source and second is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
@@ -66,56 +66,56 @@ final class Solution {
             source = Integer.parseInt(vpath[0]);
             int via = Integer.parseInt(vpath[1]);
             destination = Integer.parseInt(vpath[vpath.length - 1]);
-            DijkstraUndirectedSP dsp
+            DijkstraUndirectedSP sht
                 = new DijkstraUndirectedSP(ewg, source);
-            if (dsp.hasPathTo(destination)) {
-                Queue<Integer> que = new Queue<Integer>();
-                for (Edge e : dsp.pathTo(via)) {
+            if (sht.hasPathTo(destination)) {
+                Queue<Integer> queue = new Queue<Integer>();
+                for (Edge e : sht.pathTo(via)) {
                     int vertex = e.either();
                     int other = e.other(vertex);
-                    int v = 0;
-                    int w = 0;
-                    for (Integer j : que) {
+                    int a = 0;
+                    int b = 0;
+                    for (Integer j : queue) {
                         if (vertex == j) {
-                            v = 1;
+                            a = 1;
                         }
                         if (other == j) {
-                            w = 1;
+                            b = 1;
                         }
 
                     }
-                    if (w == 0) {
-                        que.enqueue(other);
+                    if (b == 0) {
+                        queue.enqueue(other);
                     }
-                    if (v == 0) {
-                        que.enqueue(vertex);
+                    if (a == 0) {
+                        queue.enqueue(vertex);
                     }
                 }
-                DijkstraUndirectedSP two
+                DijkstraUndirectedSP nsht
                     = new DijkstraUndirectedSP(ewg, via);
-                for (Edge e : two.pathTo(destination)) {
+                for (Edge e : nsht.pathTo(destination)) {
                     int vertex = e.either();
                     int other = e.other(vertex);
-                    int v = 0;
-                    int w = 0;
-                    for (Integer j : que) {
+                    int a = 0;
+                    int b = 0;
+                    for (Integer j : queue) {
                         if (vertex == j) {
-                            v = 1;
+                            a = 1;
                         }
                         if (other == j) {
-                            w = 1;
+                            b = 1;
                         }
                     }
-                    if (v == 0) {
-                        que.enqueue(vertex);
+                    if (a == 0) {
+                        queue.enqueue(vertex);
                     }
-                    if (w == 0) {
-                        que.enqueue(other);
+                    if (b == 0) {
+                        queue.enqueue(other);
                     }
                 }
-                System.out.println(dsp.distTo(via) + two.distTo(destination));
-                while (!que.isEmpty()) {
-                    System.out.print(que.dequeue() + " ");
+                System.out.println(sht.distTo(via) + nsht.distTo(destination));
+                while (!queue.isEmpty()) {
+                    System.out.print(queue.dequeue() + " ");
                 }
             } else {
                 System.out.println("No Path Found.");
