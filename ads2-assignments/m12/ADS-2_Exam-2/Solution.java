@@ -79,7 +79,9 @@ final class Solution {
                 for (int i = 0; i < ans.length; i = i+2) {
                     fin += ans[i];
                 }
-                System.out.println(fin);
+                String paths = "";
+                paths = fin.charAt(2) + " " + fin.charAt(3) + " " + fin.charAt(5) + " " +
+                fin.charAt(6) + " " + fin.charAt(11) + " " + fin.charAt(12);
             } else {
                 System.out.println("No Path Found.");
             }
