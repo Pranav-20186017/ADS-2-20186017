@@ -46,44 +46,37 @@ Your Output:
 9: 7-9 157.00000  2-9 237.00000
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 No Path Found.
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: EdgeWeightedGraph.V()I
-	at DijkstraUndirectedSP.<init>(DijkstraUndirectedSP.java:21)
-	at Solution.main(Solution.java:50)
+No Path Found.
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 370.0
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: EdgeWeightedGraph.V()I
-	at DijkstraUndirectedSP.<init>(DijkstraUndirectedSP.java:21)
-	at Solution.main(Solution.java:50)
+370.0
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 No Path Found.
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: EdgeWeightedGraph.V()I
-	at DijkstraUndirectedSP.<init>(DijkstraUndirectedSP.java:21)
-	at Solution.main(Solution.java:68)
+No Path Found.
 ----------------------------------------
 
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 692.0
 5 2 4 0 7 1
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: EdgeWeightedGraph.V()I
-	at DijkstraUndirectedSP.<init>(DijkstraUndirectedSP.java:21)
-	at Solution.main(Solution.java:68)
+692.0
+5 2 4 0 7 1
 ----------------------------------------
 
