@@ -54,7 +54,6 @@ public class Stack<Item> implements Iterable<Item> {
         first.next = oldfirst;
         n++;
     }
-
     /**
      * Removes and returns the item most recently added to this stack.
      *
@@ -104,46 +103,42 @@ public class Stack<Item> implements Iterable<Item> {
     public Iterator<Item> iterator() {
         return new ListIterator<Item>(first);
     }
-
-    // an iterator, doesn't implement remove() since it's optional
+    /**
+     * Class for list iterator.
+     *
+     * @param      <Item>  The item
+     */
     private class ListIterator<Item> implements Iterator<Item> {
         private Node<Item> current;
-
         public ListIterator(Node<Item> first) {
             current = first;
         }
-
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
         public boolean hasNext() {
             return current != null;
         }
-
+        /**
+         * remove an element.
+         */
         public void remove() {
             throw new UnsupportedOperationException();
         }
-
+        /**
+         * next item in the stack.
+         *
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
-
-
-    // /**
-    //  * Unit tests the {@code Stack} data type.
-    //  *
-    //  * @param args the command-line arguments
-    //  */
-    // public static void main(String[] args) {
-    //     Stack<String> stack = new Stack<String>();
-    //     while (!StdIn.isEmpty()) {
-    //         String item = StdIn.readString();
-    //         if (!item.equals("-"))
-    //             stack.push(item);
-    //         else if (!stack.isEmpty())
-    //             StdOut.print(stack.pop() + " ");
-    //     }
-    //     StdOut.println("(" + stack.size() + " left on stack)");
-    // }
 }
