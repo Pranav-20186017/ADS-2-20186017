@@ -144,15 +144,17 @@ public class SeamCarver {
         if (seam.length != height()) {
             throw new IllegalArgumentException("Seam is in invalid size");
         }
-        for (int e: seam)
+        for (int e: seam) {
             if (e < 0 || e >= width()) {
                 String s = "Indices must be in given range";
                 throw new IllegalArgumentException(s);
             }
-        for (int i = 1; i < seam.length; i++)
-            if (Math.abs(seam[i] - seam[i-1]) > 1) {
+        }
+        for (int i = 1; i < seam.length; i++) {
+            if (Math.abs(seam[i] - seam[i - 1]) > 1) {
                 throw new IllegalArgumentException("Invalid seam");
             }
+        }
         int width = width() - 1;
         int height = height();
         Color[][] colors = colors(picture);
@@ -177,7 +179,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private Color[][] colors(Picture pic) {
+    private Color[][] colors(final Picture pic) {
         Color[][] result = new Color[height()][width()];
         for (int row = 0; row < height(); row++) {
             for (int col = 0; col < width(); col++) {
@@ -206,7 +208,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private double gradient(Color color1, Color color2) {
+    private double gradient(final Color color1, final Color color2) {
         int r, g, b;
         r = Math.abs(color1.getRed() - color2.getRed());
         g = Math.abs(color1.getGreen() - color2.getGreen());
@@ -235,7 +237,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private double yGradient(int x, int y) {
+    private double yGradient(final int x, final int y) {
         Color color1, color2;
         color1 = getColor(x, y - 1);
         color2 = getColor(x, y + 1);
@@ -271,7 +273,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private int coordinateToVertex(int col, int row) {
+    private int coordinateToVertex(final int col, final int row) {
         return (row * width()) + col;
     }
     /**
@@ -280,7 +282,7 @@ public class SeamCarver {
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    private void relax(int v, int w) {
+    private void relax(final int v, final int w) {
         if (distTo[w] > distTo[v] + weights[w]) {
             distTo[w] = distTo[v] + weights[w];
             edgeTo[w] = v;
@@ -294,7 +296,7 @@ public class SeamCarver {
      *
      * @return     True if valid coordinate, False otherwise.
      */
-    private boolean isValidCoordinate(int x, int y) {
+    private boolean isValidCoordinate(final int x, final int y) {
         return x >= 0 && x < width() && y >= 0 && y < height();
     }
     /**
@@ -305,7 +307,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private Iterable<Integer> adj(int col, int row) {
+    private Iterable<Integer> adj(final int col, final int row) {
         Stack<Integer> adj = new Stack<Integer>();
 
         int x = col - 1;
