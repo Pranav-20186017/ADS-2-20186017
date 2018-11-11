@@ -67,7 +67,7 @@ public class SeamCarver {
      *
      * @return     The color.
      */
-    private Color getColor(int col, int row) {
+    private Color getColor(final int col, final int row) {
         return picture.get(col, row);
     }
     /**
@@ -78,9 +78,12 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    public double energy(int x, int y) {
+    public double energy(final int x, final int y) {
+        final int thousand = 1000;
         validateCoordinates(x, y);
-        if (isEdgePixel(x, y)) return 1000;
+        if (isEdgePixel(x, y)) {
+            return thousand;
+        }
         return Math.sqrt(xGradient(x, y) + yGradient(x, y));
     }
     /**
@@ -100,7 +103,7 @@ public class SeamCarver {
      * @param      x     { parameter_description }
      * @param      y     { parameter_description }
      */
-    private void validateCoordinates(int x, int y) {
+    private void validateCoordinates(final int x, final int y) {
         if (!isValidCoordinate(x, y)) {
             throw new IllegalArgumentException("x must be less than "
                     + width() + " and y must be less than " + height());
@@ -122,7 +125,7 @@ public class SeamCarver {
      *
      * @param      seam  The seam
      */
-    public void removeHorizontalSeam(int[] seam) {
+    public void removeHorizontalSeam(final int[] seam) {
         if (!transposed) {
             transpose();
         }
@@ -134,7 +137,7 @@ public class SeamCarver {
      *
      * @param      seam  The seam
      */
-    public void removeVerticalSeam(int[] seam) {
+    public void removeVerticalSeam(final int[] seam) {
         if (seam == null) {
             throw new IllegalArgumentException("Given seam is null");
         }
