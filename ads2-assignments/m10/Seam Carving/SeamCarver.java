@@ -3,17 +3,32 @@ import java.awt.Color;
  * Class for seam carver.
  */
 public class SeamCarver {
+    /**
+     * picture object.
+     */
     private Picture picture;
+    /**
+     * array to store distances.
+     */
     private double[] distTo;
+    /**
+     * array to store weights.
+     */
     private double[] weights;
+    /**
+     * array to store edges.
+     */
     private int[] edgeTo;
+    /**
+     * variable to mark transpose.
+     */
     private boolean transposed;
     /**
      * Constructs the object.
      *
      * @param      pic   The picture
      */
-    public SeamCarver(Picture pic) {
+    public SeamCarver(final Picture pic) {
         if (pic == null) {
             throw new IllegalArgumentException("picture is null");
         }
