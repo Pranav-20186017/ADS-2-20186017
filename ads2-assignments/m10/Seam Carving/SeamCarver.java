@@ -371,15 +371,16 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-     private int[] shortestPath(int lastVertex) {
+     private int[] shortestPath(final int lastVertex) {
         int[] path = new int[height()];
         int col = height() - 1;
         for (int v = lastVertex; v >= 0; v = edgeTo[v]) {
             path[col] = v % width();
             col--;
         }
-        if (path.length > 1)
+        if (path.length > 1) {
             path[0] = path[1];
+        }
         return path;
     }
     /**
@@ -387,9 +388,11 @@ public class SeamCarver {
      */
     private void transpose() {
         Picture tPicture = new Picture(height(), width());
-        for (int row = 0; row < tPicture.height(); row++)
-            for (int col = 0; col < tPicture.width(); col++)
+        for (int row = 0; row < tPicture.height(); row++) {
+            for (int col = 0; col < tPicture.width(); col++) {
                 tPicture.set(col, row, getColor(row, col));
+            }
+        }
 
         picture = tPicture;
         transposed = !transposed;
