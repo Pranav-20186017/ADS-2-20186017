@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Stopwatch;
 /**
  * Class for resize demo.
  */
-public class ResizeDemo {
+final class ResizeDemo {
     /**
      * Constructs the object.
      */
@@ -23,7 +23,7 @@ public class ResizeDemo {
         }
         Picture inputImg = new Picture(args[0]);
         int removeColumns = Integer.parseInt(args[1]);
-        int removeRows = Integer.parseInt(args[2]); 
+        int removeRows = Integer.parseInt(args[2]);
         StdOut.printf("image is %d columns by %d rows\n",
             inputImg.width(), inputImg.height());
         SeamCarver sc = new SeamCarver(inputImg);
@@ -42,5 +42,5 @@ public class ResizeDemo {
         StdOut.println("Resizing time: " + sw.elapsedTime() + " seconds.");
         inputImg.show();
         outputImg.show();
-    }  
+    }
 }
