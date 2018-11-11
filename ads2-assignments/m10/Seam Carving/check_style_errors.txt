@@ -222,6 +222,51 @@ Starting audit...
 Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:6:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:7:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:8:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:9:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:10:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:16:23: Parameter pic should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:55:28: Parameter col should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:55:37: Parameter row should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:66:26: Parameter x should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:66:33: Parameter y should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:68: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:68:39: '1000' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:88:38: Parameter x should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:88:45: Parameter y should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:110:38: Parameter seam should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:122:36: Parameter seam should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:129: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:134: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:135:42: '-' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:135:43: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:162:30: Parameter pic should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:179:33: Parameter col should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:179:42: Parameter row should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:191:29: Parameter color1 should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:191:43: Parameter color2 should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:206:30: Parameter x should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:206:37: Parameter y should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:220:30: Parameter x should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:220:37: Parameter y should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:256:36: Parameter col should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:256:45: Parameter row should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:265:24: Parameter v should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:265:31: Parameter w should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:279:39: Parameter x should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:279:46: Parameter y should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:290:35: Parameter col should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:290:44: Parameter row should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:354:33: Parameter lastVertex should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:361: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:370: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m10\Seam Carving\SeamCarver.java:371: 'for' construct must use '{}'s. [NeedBraces]
+Audit done.
+Checkstyle ends with 42 errors.
+Starting audit...
 Audit done.
 Starting audit...
 Audit done.
