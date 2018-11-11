@@ -196,7 +196,7 @@ public class SeamCarver {
      *
      * @return     True if edge pixel, False otherwise.
      */
-    private boolean isEdgePixel(int col, int row) {
+    private boolean isEdgePixel(final int col, final int row) {
         return (col == 0 || col == (width() - 1)
             || row == 0 || row == (height() - 1));
     }
@@ -223,7 +223,7 @@ public class SeamCarver {
      *
      * @return     { description_of_the_return_value }
      */
-    private double xGradient(int x, int y) {
+    private double xGradient(final int x, final int y) {
         Color color1, color2;
         color1 = getColor(x - 1, y);
         color2 = getColor(x + 1, y);
