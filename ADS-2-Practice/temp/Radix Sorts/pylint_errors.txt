@@ -1,10 +1,6 @@
 ************* Module solution
-solution.py:4:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-solution.py:5:0: C0304: Final newline missing (missing-final-newline)
-solution.py:1:0: C0111: Missing module docstring (missing-docstring)
-solution.py:1:0: C0103: Constant name "n" doesn't conform to UPPER_CASE naming style (invalid-name)
-solution.py:2:0: C0103: Constant name "a" doesn't conform to UPPER_CASE naming style (invalid-name)
+solution.py:9:0: C0304: Final newline missing (missing-final-newline)
 
 ------------------------------------------------------------------
-Your code has been rated at 0.00/10 (previous run: 2.14/10, -2.14)
+Your code has been rated at 8.00/10 (previous run: 0.00/10, +8.00)
 

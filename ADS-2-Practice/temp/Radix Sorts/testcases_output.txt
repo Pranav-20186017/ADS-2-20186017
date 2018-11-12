@@ -60,8 +60,8 @@ Expected Output:
 
 Your Output: 
 Traceback (most recent call last):
-  File "solution.py", line 4, in <module>
-    a.append(int(input()))
+  File "solution.py", line 8, in <module>
+    A.append(int(input()))
 ValueError: invalid literal for int() with base 10: 'abacd1210'
 ----------------------------------------
 
