@@ -1,0 +1,3 @@
+LSD works only with objects of same size, and in this case all the keys are of different size
+
+thus LSD cannot be applied.
