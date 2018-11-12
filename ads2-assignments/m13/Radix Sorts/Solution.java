@@ -27,7 +27,7 @@ final class Solution {
         ans += "]";
         return ans;
     }
-    /**  
+    /**
      * Rearranges the array of W-character strings in ascending order.
      *
      * @param a the array to be sorted
