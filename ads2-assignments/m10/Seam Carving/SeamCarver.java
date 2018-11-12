@@ -4,415 +4,276 @@ import java.awt.Color;
  */
 public class SeamCarver {
     /**
-     * picture object.
+     *the picture object.
      */
     private Picture picture;
     /**
-     * array to store distances.
+     *the width of image.
      */
-    private double[] distTo;
+    private int width;
     /**
-     * array to store weights.
+     *the height of pixel.
      */
-    private double[] weights;
+    private int height;
     /**
-     * array to store edges.
-     */
-    private int[] edgeTo;
-    /**
-     * variable to mark transpose.
-     */
-    private boolean transposed;
-    /**
-     * Constructs the object.
+     *the constructor to initialize.
      *
      * @param      pic   The picture
      */
     public SeamCarver(final Picture pic) {
-        if (pic == null) {
-            throw new IllegalArgumentException("picture is null");
-        }
-        this.picture = new Picture(pic);
-        this.transposed = false;
+        this.picture = pic;
+        width = picture.width();
+        height = picture.height();
     }
     /**
-     * returns the picture.
-     *
-     * @return     { description_of_the_return_value }
+     *the method will return the picture.
+     *object.
+     * @return picture object.
      */
     public Picture picture() {
-        return new Picture(picture);
+        return picture;
     }
     /**
-     * returns width of the picture.
-     *
-     * @return     { description_of_the_return_value }
+     *this method will return the width.
+     *of image.
+     * @return width of pixel
      */
     public int width() {
-        return picture.width();
+        return width;
     }
     /**
-     * returns height of the picture.
+     *height of current picture.
      *
-     * @return     { description_of_the_return_value }
+     * @return height of image.
      */
     public int height() {
-        return picture.height();
+        return height;
     }
     /**
-     * Gets the color.
+     *energy of pixel at column x and row y.
      *
-     * @param      col   The col
-     * @param      row   The row
+     * @param      x  x coordinate
+     * @param      y   y coordinate
      *
-     * @return     The color.
-     */
-    private Color getColor(final int col, final int row) {
-        return picture.get(col, row);
-    }
-    /**
-     * computes the enerrgy of a given co-ordinate.
-     *
-     * @param      x     { parameter_description }
-     * @param      y     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     * @return energy of pixel.
      */
     public double energy(final int x, final int y) {
-        final int thousand = 1000;
-        validateCoordinates(x, y);
-        if (isEdgePixel(x, y)) {
-            return thousand;
+        //handle exceptions
+        final double num = 1000.0;
+        if (x == 0 || y == 0 || y == (height - 1) || x == (width - 1)) {
+            return num;
         }
-        return Math.sqrt(xGradient(x, y) + yGradient(x, y));
+        double xCoordinate = 0.0;
+        double yCoordinate = 0.0;
+        Color object = picture.get(x, y);
+        Color leftObj = picture.get(x, y - 1);
+        Color rightObj = picture.get(x, y + 1);
+        double xRed = Math.abs((leftObj.getRed() - rightObj.getRed()));
+        double xGreen = Math.abs((leftObj.getGreen() - rightObj.getGreen()));
+        double xBlue = Math.abs((leftObj.getBlue() - rightObj.getBlue()));
+        xCoordinate = Math.pow(xRed, 2) + Math.pow(xBlue, 2)
+                      + Math.pow(xGreen, 2);
+        Color topObj = picture.get(x - 1, y);
+        Color bottomObj = picture.get(x + 1, y);
+        double yRed = Math.abs((topObj.getRed() - bottomObj.getRed()));
+        double yGreen = Math.abs((topObj.getGreen() - bottomObj.getGreen()));
+        double yBlue = Math.abs((topObj.getBlue() - bottomObj.getBlue()));
+        yCoordinate = Math.pow(yRed, 2) + Math.pow(yBlue, 2)
+                      + Math.pow(yGreen, 2);
+        double sum = Math.sqrt((xCoordinate + yCoordinate));
+        return sum;
     }
-    /**
-     * finds the horizontal seam.
+    /**sequence of indices for horizontal seam.
      *
-     * @return     { description_of_the_return_value }
+     *time complexity is O(w*h)
+     *w is the width and h is the height
+     * @return  sequence of indices of horizontal seam
      */
     public int[] findHorizontalSeam() {
-        if (!transposed) {
-            transpose();
+        final int n = 1000;
+        int[][] edgeTo = new int[height][width];
+        double[][] distTo = new double[height][width];
+        reset(distTo);
+        for (int row = 0; row < height; row++) {
+            distTo[row][0] = n;
         }
-        return findSeam();
+        // this is for relaxation.
+        for (int col = 0; col < width - 1; col++) {
+            for (int row = 0; row < height; row++) {
+                relaxH(row, col, edgeTo, distTo);
+            }
+        }
+        double minDist = Double.MAX_VALUE;
+        int minRow = 0;
+        for (int row = 0; row < height; row++) {
+            if (minDist > distTo[row][width - 1]) {
+                minDist = distTo[row][width - 1];
+                minRow = row;
+            }
+        }
+        int[] indices = new int[width];
+        //to find the horizontal seam.
+        for (int col = width - 1, row = minRow; col >= 0; col--) {
+            indices[col] = row;
+            row -= edgeTo[row][col];
+        }
+        return indices;
     }
     /**
-     * validates given co-ordinates.
+     * relaxation for horizontal.
      *
-     * @param      x     { parameter_description }
-     * @param      y     { parameter_description }
+     * @param      row     The row
+     * @param      col     The col
+     * @param      edgeTo  The edge to
+     * @param      distTo  The distance to
      */
-    private void validateCoordinates(final int x, final int y) {
-        if (!isValidCoordinate(x, y)) {
-            throw new IllegalArgumentException("x must be less than "
-                    + width() + " and y must be less than " + height());
+    private void relaxH(final int row, final int col,
+                        final int[][] edgeTo, final double[][] distTo) {
+        int nextCol = col + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextRow = row + i;
+            if (nextRow < 0 || nextRow >= height) {
+                continue;
+            }
+            if (i == 0) {
+                if (distTo[nextRow][nextCol] >= distTo[row][col]
+                        + energy(nextCol, nextRow)) {
+                    distTo[nextRow][nextCol] = distTo[row][col]
+                                               + energy(nextCol, nextRow);
+                    edgeTo[nextRow][nextCol] = i;
+                }
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col]
+                    + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col]
+                                           + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
         }
     }
     /**
-     * finds the vertical seam in a given picture.
-     *
-     * @return     { description_of_the_return_value }
+     *this method is to find the vertical seam.
+     *first of all find the shortest path from top to.
+     *bottom.
+     *time complexity is O(w*h)
+     *w is the width and h is the height
+     * @return sequence of indices for vertical seam.
      */
     public int[] findVerticalSeam() {
-        if (transposed) {
-            transpose();
+        final double thousand = 1000.0;
+        double[][] energy = new double[height][width];
+        int[][] edgeTo = new int[height][width];
+        double[][] distTo = new double[height][width];
+        reset(distTo);
+        int[] indices = new int[height];
+        if (width == 1 || height == 1) {
+            return indices;
         }
-        return findSeam();
+        for (int i = 0; i < width; i++) {
+            distTo[0][i] = thousand;
+        }
+        // this is for relaxation.
+        for (int i = 0; i < height - 1; i++) {
+            for (int j = 0; j < width; j++) {
+                relaxV(i, j, edgeTo, distTo);
+            }
+        }
+        // calculating from last row
+        // column wise
+        double minDist = Double.MAX_VALUE;
+        int minCol = 0;
+        for (int col = 0; col < width; col++) {
+            if (minDist > distTo[height - 1][col]) {
+                minDist = distTo[height - 1][col];
+                minCol = col;
+            }
+        }
+        //indices values of shortest path.
+        for (int row = height - 1, col = minCol; row >= 0; row--) {
+            indices[row] = col;
+            col -= edgeTo[row][col];
+        }
+        indices[0] = indices[1];
+        return indices;
+    }
+    /**.
+     *time complexity is O(W * H)
+     *W is the width of image
+     *H is the height of image
+     * @param      distTo  The distance to
+     */
+    private void reset(final double[][] distTo) {
+        /**
+         *reset all the values to maxvalue.
+         */
+        for (int i = 0; i < distTo.length; i++) {
+            for (int j = 0; j < distTo[i].length; j++) {
+                distTo[i][j] = Double.MAX_VALUE;
+            }
+        }
+    }
+    /**
+     * relaxation for vertex.
+     *
+     * @param      row     The row
+     * @param      col     The col
+     * @param      edgeTo  The edge to
+     * @param      distTo  The distance to
+     */
+    private void relaxV(final int row, final int col, final int[][] edgeTo,
+                        final double[][] distTo) {
+        int nextRow = row + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextCol = col + i;
+            if (nextCol < 0 || nextCol >= width) {
+                continue;
+            }
+            //spl case for bottom element.
+            if (i == 0) {
+                if (distTo[nextRow][nextCol] >= distTo[row][col]
+                        + energy(nextCol, nextRow)) {
+                    distTo[nextRow][nextCol] = distTo[row][col]
+                                               + energy(nextCol, nextRow);
+                    edgeTo[nextRow][nextCol] = i;
+                }
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col]
+                    + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col]
+                                           + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
+        }
     }
     /**
      * Removes a horizontal seam.
+     * time complexity is O(width * height)
      *
      * @param      seam  The seam
      */
     public void removeHorizontalSeam(final int[] seam) {
-        if (!transposed) {
-            transpose();
+        //handle exceptions
+        for (int col = 0; col < width; col++) {
+            for (int row = seam[col]; row < height - 1; row++) {
+                this.picture.set(col, row, this.picture.get(col, row + 1));
+            }
         }
-        removeVerticalSeam(seam);
-        transpose();
+        height--;
     }
+
     /**
      * Removes a vertical seam.
+     * time complexity is O(width * height)
      *
      * @param      seam  The seam
      */
     public void removeVerticalSeam(final int[] seam) {
-        if (seam == null) {
-            throw new IllegalArgumentException("Given seam is null");
-        }
-        if (seam.length != height()) {
-            throw new IllegalArgumentException("Seam is in invalid size");
-        }
-        for (int e: seam) {
-            if (e < 0 || e >= width()) {
-                String s = "Indices must be in given range";
-                throw new IllegalArgumentException(s);
-            }
-        }
-        for (int i = 1; i < seam.length; i++) {
-            if (Math.abs(seam[i] - seam[i - 1]) > 1) {
-                throw new IllegalArgumentException("Invalid seam");
-            }
-        }
-        int width = width() - 1;
-        int height = height();
-        Color[][] colors = colors(picture);
-        Picture resizedPicture = new Picture(width, height);
         for (int row = 0; row < height; row++) {
-            int seamCol = seam[row];
-            Color[] original = colors[row];
-            Color[] seamRemoved = new Color[width];
-            System.arraycopy(original, 0, seamRemoved, 0, seamCol);
-            System.arraycopy(original, seamCol + 1,
-                    seamRemoved, seamCol, width - seamCol);
-            for (int col = 0; col < width; col++) {
-                resizedPicture.set(col, row, seamRemoved[col]);
+            for (int col = seam[row]; col < width - 1; col++) {
+                this.picture.set(col, row, this.picture.get(col + 1, row));
             }
         }
-        this.picture = resizedPicture;
-    }
-    /**
-     * fetches the colors given a picture.
-     *
-     * @param      pic   The picture
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private Color[][] colors(final Picture pic) {
-        Color[][] result = new Color[height()][width()];
-        for (int row = 0; row < height(); row++) {
-            for (int col = 0; col < width(); col++) {
-                result[row][col] = pic.get(col, row);
-            }
-        }
-        return result;
-    }
-    /**
-     * Determines if edge pixel.
-     *
-     * @param      col   The col
-     * @param      row   The row
-     *
-     * @return     True if edge pixel, False otherwise.
-     */
-    private boolean isEdgePixel(final int col, final int row) {
-        return (col == 0 || col == (width() - 1)
-            || row == 0 || row == (height() - 1));
-    }
-    /**
-     * computes the gradinet of two colors.
-     *
-     * @param      color1  The color 1
-     * @param      color2  The color 2
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private double gradient(final Color color1, final Color color2) {
-        int r, g, b;
-        r = Math.abs(color1.getRed() - color2.getRed());
-        g = Math.abs(color1.getGreen() - color2.getGreen());
-        b = Math.abs(color1.getBlue() - color2.getBlue());
-        return r * r + g * g + b * b;
-    }
-    /**
-     * calculates the x gradient.
-     *
-     * @param      x     { parameter_description }
-     * @param      y     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private double xGradient(final int x, final int y) {
-        Color color1, color2;
-        color1 = getColor(x - 1, y);
-        color2 = getColor(x + 1, y);
-        return gradient(color1, color2);
-    }
-    /**
-     * computes the y gradient.
-     *
-     * @param      x     { parameter_description }
-     * @param      y     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private double yGradient(final int x, final int y) {
-        Color color1, color2;
-        color1 = getColor(x, y - 1);
-        color2 = getColor(x, y + 1);
-        return gradient(color1, color2);
-    }
-    /**
-     * initializes edges and weights.
-     */
-    private void initialise() {
-        int size = width() * height();
-        weights = new double[size];
-        distTo = new double[size];
-        edgeTo = new int[size];
-        for (int row = 0; row < height(); row++) {
-            for (int col = 0; col < width(); col++) {
-                int v = coordinateToVertex(col, row);
-                weights[v] = energy(col, row);
-                edgeTo[v] = -1;
-                if (row == 0) {
-                    distTo[v] = weights[v];
-                } else {
-                    distTo[v] = Double.POSITIVE_INFINITY;
-                }
-            }
-        }
-
-    }
-    /**
-     * converts co-ordinate to a vertex in a graph.
-     *
-     * @param      col   The col
-     * @param      row   The row
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private int coordinateToVertex(final int col, final int row) {
-        return (row * width()) + col;
-    }
-    /**
-     * relaxes the edges.
-     *
-     * @param      v     { parameter_description }
-     * @param      w     { parameter_description }
-     */
-    private void relax(final int v, final int w) {
-        if (distTo[w] > distTo[v] + weights[w]) {
-            distTo[w] = distTo[v] + weights[w];
-            edgeTo[w] = v;
-        }
-    }
-    /**
-     * Determines if valid coordinate.
-     *
-     * @param      x     { parameter_description }
-     * @param      y     { parameter_description }
-     *
-     * @return     True if valid coordinate, False otherwise.
-     */
-    private boolean isValidCoordinate(final int x, final int y) {
-        return x >= 0 && x < width() && y >= 0 && y < height();
-    }
-    /**
-     * adjacency matrix for a given graph.
-     *
-     * @param      col   The col
-     * @param      row   The row
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private Iterable<Integer> adj(final int col, final int row) {
-        Stack<Integer> adj = new Stack<Integer>();
-
-        int x = col - 1;
-        int y = row + 1;
-        int w;
-        if (isValidCoordinate(x, y)) {
-            w = coordinateToVertex(x, y);
-            adj.push(w);
-        }
-
-        x = col + 1;
-        y = row + 1;
-        if (isValidCoordinate(x, y)) {
-            w = coordinateToVertex(x, y);
-            adj.push(w);
-        }
-
-        x = col;
-        y = row + 1;
-        if (isValidCoordinate(x, y)) {
-            w = coordinateToVertex(x, y);
-            adj.push(w);
-        }
-        return adj;
-    }
-    /**
-     * relaxes the edges.
-     */
-    private void relaxEdges() {
-        for (int row = 0; row < height(); row++) {
-            for (int col = 0; col < width(); col++) {
-                int v = coordinateToVertex(col, row);
-                for (int w: adj(col, row)) {
-                    relax(v, w);
-                }
-            }
-        }
-    }
-    /**
-     * computes the shortest path to the last vertx.
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private int shortestPathLastVertex() {
-        double min = Double.POSITIVE_INFINITY;
-        int lastRow = height() - 1;
-        int lastVertex = -1;
-        for (int col = 0; col < width(); col++) {
-            int v = coordinateToVertex(col, lastRow);
-            if (min > distTo[v]) {
-                min = distTo[v];
-                lastVertex = v;
-            }
-        }
-        return lastVertex;
-    }
-    /**
-     * computes shortest path.
-     *
-     * @param      lastVertex  The last vertex
-     *
-     * @return     { description_of_the_return_value }
-     */
-     private int[] shortestPath(final int lastVertex) {
-        int[] path = new int[height()];
-        int col = height() - 1;
-        for (int v = lastVertex; v >= 0; v = edgeTo[v]) {
-            path[col] = v % width();
-            col--;
-        }
-        if (path.length > 1) {
-            path[0] = path[1];
-        }
-        return path;
-    }
-    /**
-     * transposes the matrix.
-     */
-    private void transpose() {
-        Picture tPicture = new Picture(height(), width());
-        for (int row = 0; row < tPicture.height(); row++) {
-            for (int col = 0; col < tPicture.width(); col++) {
-                tPicture.set(col, row, getColor(row, col));
-            }
-        }
-
-        picture = tPicture;
-        transposed = !transposed;
-    }
-    /**
-     * finds a seam.
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private int[] findSeam() {
-        initialise();
-        relaxEdges();
-        int[] path = shortestPath(shortestPathLastVertex());
-
-        if (transposed) {
-            transpose();
-        }
-        weights = null;
-        distTo = null;
-        edgeTo = null;
-        return path;
+        width--;
     }
 }
+

@@ -2,22 +2,24 @@
  *  Compilation:  javac ShowSeams.java
  *  Execution:    java ShowSeams input.png
  *  Dependencies: SeamCarver.java SCUtility.java
+ *
  *  Read image from file specified as command line argument. Show 3 images
  *  original image as well as horizontal and vertical seams of that image.
  *  Each image hides the previous one - drag them to see all three.
  *
  ******************************************************************************/
+
 import edu.princeton.cs.algs4.Picture;
 import edu.princeton.cs.algs4.StdOut;
 /**
  * Class for show seams.
  */
-final class ShowSeams {
+public final class ShowSeams {
     /**
      * Constructs the object.
      */
     private ShowSeams() {
-        //unused.
+
     }
     /**
      * Shows the horizontal seam.
@@ -42,7 +44,7 @@ final class ShowSeams {
         overlay.show();
     }
     /**
-     * main method.
+     * Main function.
      *
      * @param      args  The arguments
      */
@@ -56,6 +58,6 @@ final class ShowSeams {
         showHorizontalSeam(sc);
         StdOut.printf("Displaying vertical seam calculated.\n");
         showVerticalSeam(sc);
-
     }
 }
+
