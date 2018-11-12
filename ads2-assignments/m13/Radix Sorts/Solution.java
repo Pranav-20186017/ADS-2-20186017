@@ -16,37 +16,37 @@ final class Solution {
      *
      * @return     String representation of the object.
      */
-    public static String toString(String[] a) {
+    public static String toString(final String[] a) {
         String s = "[";
         String ans;
         for (int i = 0; i < a.length; i++) {
             s = s + a[i] + ", ";
         }
-        int val = s.length()-2;
-        ans = s.substring(0,val);
+        int val = s.length() - 2;
+        ans = s.substring(0, val);
         ans += "]";
         return ans;
     }
-    /**
-     * sort using LSD Radix Sort.
+    /**  
+     * Rearranges the array of W-character strings in ascending order.
      *
-     * @param      a     { parameter_description }
-     * @param      w     { parameter_description }
+     * @param a the array to be sorted
+     * @param w the number of characters per string
      */
-    public static void sort(String[] a, int w) {
+    public static void sort(final String[] a, final int w) {
         int n = a.length;
-        int R = 256;   // extend ASCII alphabet size
+        final int z = 256;   // extend ASCII alphabet size
         String[] aux = new String[n];
         for (int d = w - 1; d >= 0; d--) {
             // sort by key-indexed counting on dth character
             // compute frequency counts
-            int[] count = new int[R + 1];
+            int[] count = new int[z+1];
             for (int i = 0; i < n; i++) {
                 count[a[i].charAt(d) + 1]++;
             }
             // compute cumulates
-            for (int r = 0; r < R; r++) {
-                count[r+1] += count[r];
+            for (int r = 0; r < z; r++) {
+                count[r + 1] += count[r];
             }
             // move data
             for (int i = 0; i < n; i++) {
