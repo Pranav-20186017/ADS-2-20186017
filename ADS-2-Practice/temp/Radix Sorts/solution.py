@@ -6,4 +6,4 @@ N = int(input())
 A = []
 for i in range(N):
     A.append((input()))
-print(sorted(A))
+print('[%s]' % ', '.join(map(str, A)))
