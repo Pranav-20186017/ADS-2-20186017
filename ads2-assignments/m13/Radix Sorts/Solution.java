@@ -40,7 +40,7 @@ final class Solution {
         for (int d = w - 1; d >= 0; d--) {
             // sort by key-indexed counting on dth character
             // compute frequency counts
-            int[] count = new int[z+1];
+            int[] count = new int[z + 1];
             for (int i = 0; i < n; i++) {
                 count[a[i].charAt(d) + 1]++;
             }
@@ -71,7 +71,7 @@ final class Solution {
             a[i] = sc.nextLine();
         }
         int w = a[0].length();
-        sort(a,w);
+        sort(a, w);
         System.out.println(toString(a));
     }
 }
