@@ -3,9 +3,6 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m14\Assignment-1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
 Audit done.
