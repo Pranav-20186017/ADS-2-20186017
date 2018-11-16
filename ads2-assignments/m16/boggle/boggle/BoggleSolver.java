@@ -1,3 +1,6 @@
+/**.
+ * { item_description }
+ */
 import java.util.HashSet;
 /**.
  * Class for boggle solver.
@@ -63,7 +66,7 @@ public class BoggleSolver {
         return words;
     }
     /**.
-     * seraches for a word on the boogle board.
+     * { function_description }
      *
      * @param      board    The board
      * @param      i        { parameter_description }
@@ -94,6 +97,9 @@ public class BoggleSolver {
         visited[i][j] = true;
         for (int k = -1; k <= 1; k++) {
             for (int l = -1; l <= 1; l++) {
+                // if (k == 0 && l == 0) {
+                //  continue;
+                // }
                 if ((i + k >= 0) && (i + k < board.rows())
                         && (j + l >= 0) && (j + l < board.cols())) {
                     searchWord(board, i + k, j + l, word,
@@ -104,7 +110,7 @@ public class BoggleSolver {
         visited[i][j] = false;
     }
     /**.
-     * computes the score.
+     * { function_description }
      *
      * @param      word  The word
      *
@@ -134,3 +140,4 @@ public class BoggleSolver {
         }
     }
 }
+
