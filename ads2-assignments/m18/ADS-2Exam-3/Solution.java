@@ -95,7 +95,15 @@ public class Solution {
 
 	public static BinarySearchST<String, Integer> loadDictionary(String file) {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
-		// your code goes here
+		String[] t9d = toReadFile(file);
+		for (int i = 0; i < t9d.length; i++) {
+			String word = t9d[i].toLowerCase();
+			if (st.contains(word)) {
+				st.put(word, st.get(word) + 1);
+			} else {
+				st.put(word, 1);
+			}
+		}
 		return st;
 	}
 
@@ -104,7 +112,7 @@ public class Solution {
 class T9 {
 
 	public T9(BinarySearchST<String, Integer> st) {
-		// your code goes here
+		
 	}
 
 	// get all the prefixes that match with given prefix.
