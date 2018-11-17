@@ -92,7 +92,7 @@ messagesome
 going
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 hello
 pizza
@@ -158,31 +158,58 @@ seeking
 
 Your Output: 
 hello
+pizza
+what
+sunday
+ball
+call
 involve
 finish
 gone
 good
 home
+battery
 friends
+watches
 morning
 tonight
 shop
 phne
-shame
+any
 bmw
-bowa
 box
 boy
 coz
-shades
+jay
+jaz
+kay
+law
+lay
+ammo
+das
+ear
+far
 send
 pocked
 pest
 rest
-wanna
 woo
+paying
+saying
+james
+lands
+hates
+casting
+packing
 peeps
-ccna
+bam
+bao
+cam
+can
+abt
+act
+bat
+cat
 mines
 liver
 lives

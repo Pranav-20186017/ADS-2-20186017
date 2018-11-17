@@ -156,7 +156,7 @@ class T9 {
             String[] token = itr.split("");
             String number = "";
             for(String ch : token){
-                if(ch == "a" || ch.equals("b") || ch.equals("c")) {
+                if(ch.equals("a") || ch.equals("b") || ch.equals("c")) {
                     number = number + "2";
                 }
                 if(ch.equals("d") || ch.equals("e") || ch.equals("f")) {
