@@ -156,28 +156,36 @@ class T9 {
             String[] token = itr.split("");
             String number = "";
             for(String ch : token){
-                if(ch.equals("a") || ch.equals("b") || ch.equals("c")) {
+                if(ch.equals("a")
+                    || ch.equals("b") || ch.equals("c")) {
                     number = number + "2";
                 }
-                if(ch.equals("d") || ch.equals("e") || ch.equals("f")) {
+                if(ch.equals("d")
+                    || ch.equals("e") || ch.equals("f")) {
                     number = number + "3";
                 }
-                if(ch.equals("g") || ch.equals("h") || ch.equals("i")) {
+                if(ch.equals("g")
+                    || ch.equals("h") || ch.equals("i")) {
                     number = number + "4";
                 }
-                if(ch.equals("j") || ch.equals("k") || ch.equals("l")) {
+                if(ch.equals("j")
+                    || ch.equals("k") || ch.equals("l")) {
                     number = number + "5";
                 }
-                if(ch.equals("m") || ch.equals("n") || ch.equals("o")) {
+                if(ch.equals("m")
+                    || ch.equals("n") || ch.equals("o")) {
                     number = number + "6";
                 }
-                if(ch.equals("p") || ch.equals("q") || ch.equals("r") || ch.equals("s")) {
+                if(ch.equals("p")
+                    || ch.equals("q") || ch.equals("r") || ch.equals("s")) {
                     number = number + "7";
                 }
-                if(ch.equals("t") || ch.equals("u") || ch.equals("v")) {
+                if(ch.equals("t")
+                    || ch.equals("u") || ch.equals("v")) {
                     number = number + "8";
                 }
-                if(ch.equals("w") || ch.equals("x") || ch.equals("y") || ch.equals("z")) {
+                if(ch.equals("w")
+                    || ch.equals("x") || ch.equals("y") || ch.equals("z")) {
                     number = number + "9";
                 }
             }
