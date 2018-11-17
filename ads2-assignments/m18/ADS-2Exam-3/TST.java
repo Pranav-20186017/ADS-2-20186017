@@ -9,7 +9,7 @@ public class TST<Value> {
      */
     private int n;
     /**
-     * node.
+     * root of TST.
      */
     private Node<Value> root;
     /**
@@ -23,11 +23,11 @@ public class TST<Value> {
          */
         private char c;
         /**
-         * nodes left, mid adnd right.
+         * left, middle, and right subtries.
          */
         private Node<Value> left, mid, right;
         /**
-         * value in the node.
+         * value associated with string.
          */
         private Value val;
     }
@@ -49,14 +49,14 @@ public class TST<Value> {
     /**
      * Does this symbol table contain the given key?
      * @param key the key
-     * @return {@code true} if this symbol table contains {@code key} and
-     *     {@code false} otherwise
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @return {true} if this symbol table contains {key} and
+     *     {false} otherwise
+     * @throws IllegalArgumentException if {key} is {null}
      */
     public boolean contains(final String key) {
         if (key == null) {
-            throw new
-            IllegalArgumentException("argument to contains() is null");
+            throw new IllegalArgumentException(
+                "argument to contains() is null");
         }
         return get(key) != null;
     }
@@ -64,19 +64,19 @@ public class TST<Value> {
     /**
      * Returns the value associated with the given key.
      * @param key the key
-     * @return the value associated with the given key if
-     *  the key is in the symbol table
-     *     and {@code null} if the key is not in the symbol table
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @return the value associated with the given key
+     *     if the key is in the symbol table
+     *     and {null} if the key is not in the symbol table
+     * @throws IllegalArgumentException if {key} is {null}
      */
     public Value get(final String key) {
         if (key == null) {
-            throw new
-            IllegalArgumentException("calls get() with null argument");
+            throw new IllegalArgumentException(
+                "calls get() with null argument");
         }
         if (key.length() == 0) {
-            throw new
-            IllegalArgumentException("key must have length >= 1");
+            throw new IllegalArgumentException(
+                "key must have length >= 1");
         }
         Node<Value> x = get(root, key, 0);
         if (x == null) {
@@ -84,8 +84,9 @@ public class TST<Value> {
         }
         return x.val;
     }
+
     /**
-     * gets the value.
+     * return subtrie corresponding to given key.
      *
      * @param      x     { parameter_description }
      * @param      key   The key
@@ -93,48 +94,60 @@ public class TST<Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node<Value> get(Node<Value> x, String key, int d) {
+    private Node<Value> get(final Node<Value> x, final String key,
+                            final int d) {
         if (x == null) {
             return null;
         }
         if (key.length() == 0) {
-            throw new
-            IllegalArgumentException("key must have length >= 1");
+            throw new IllegalArgumentException(
+                "key must have length >= 1");
         }
         char c = key.charAt(d);
         if (c < x.c) {
             return get(x.left,  key, d);
-        }
-        else if (c > x.c) {
+        } else if (c > x.c) {
             return get(x.right, key, d);
-        }
-        else if (d < key.length() - 1) {
+        } else if (d < key.length() - 1) {
             return get(x.mid,   key, d + 1);
-        }
-        else {
+        } else {
             return x;
         }
     }
 
     /**
-     * Inserts the key-value pair into the symbol table, overwriting the old value
-     * with the new value if the key is already in the symbol table.
-     * If the value is {@code null}, this effectively deletes the key from the symbol table.
+     * Inserts the key-value pair into the symbol table,
+     * overwriting the old value with the new value if the
+     * key is already in the symbol table. If the value is {null},
+     * this effectively deletes the key from the symbol table.
+     *
      * @param key the key
      * @param val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @throws IllegalArgumentException if {key} is {null}
      */
-    public void put(String key, Value val) {
+    public void put(final String key, final Value val) {
         if (key == null) {
-            throw new IllegalArgumentException("calls put() with null key");
+            throw new IllegalArgumentException(
+                "calls put() with null key");
         }
         if (!contains(key)) {
             n++;
         }
         root = put(root, key, val, 0);
     }
-
-    private Node<Value> put(Node<Value> x, String key, Value val, int d) {
+    /**
+     * put function.
+     *
+     * @param      x1     { parameter_description }
+     * @param      key   The key
+     * @param      val   The value
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node<Value> put(final Node<Value> x1, final String key,
+                            final Value val, final int d) {
+        Node x = x1;
         char c = key.charAt(d);
         if (x == null) {
             x = new Node<Value>();
@@ -142,29 +155,29 @@ public class TST<Value> {
         }
         if (c < x.c) {
             x.left  = put(x.left,  key, val, d);
-        }
-        else if (c > x.c) {
+        } else if (c > x.c) {
             x.right = put(x.right, key, val, d);
-        }
-        else if (d < key.length() - 1) {
+        } else if (d < key.length() - 1) {
             x.mid   = put(x.mid,   key, val, d + 1);
-        }
-        else {
+        } else {
             x.val   = val;
         }
         return x;
     }
+
     /**
-     * Returns the string in the symbol table that is the longest prefix of {@code query},
-     * or {@code null}, if no such string.
+     * Returns the string in the symbol table that is the longest
+     * prefix of {query},or {null}, if no such string.
+     *
      * @param query the query string
-     * @return the string in the symbol table that is the longest prefix of {@code query},
-     *     or {@code null} if no such string
-     * @throws IllegalArgumentException if {@code query} is {@code null}
+     * @return the string in the symbol table that is the longest prefix
+     *          of {query},or {null} if no such string
+     * @throws IllegalArgumentException if {query} is {null}
      */
-    public String longestPrefixOf(String query) {
+    public String longestPrefixOf(final String query) {
         if (query == null) {
-            throw new IllegalArgumentException("calls longestPrefixOf() with null argument");
+            throw new IllegalArgumentException(
+                "calls longestPrefixOf() with null argument");
         }
         if (query.length() == 0) {
             return null;
@@ -176,13 +189,13 @@ public class TST<Value> {
             char c = query.charAt(i);
             if (c < x.c) {
                 x = x.left;
-            }
-            else if (c > x.c) {
+            } else if (c > x.c) {
                 x = x.right;
-            }
-            else {
+            } else {
                 i++;
-                if (x.val != null) length = i;
+                if (x.val != null) {
+                    length = i;
+                }
                 x = x.mid;
             }
         }
@@ -190,10 +203,10 @@ public class TST<Value> {
     }
 
     /**
-     * Returns all keys in the symbol table as an {@code Iterable}.
-     * To iterate over all of the keys in the symbol table named {@code st},
-     * use the foreach notation: {@code for (Key key : st.keys())}.
-     * @return all keys in the symbol table as an {@code Iterable}
+     * Returns all keys in the symbol table as an {Iterable}.
+     * To iterate over all of the keys in the symbol table named {st},
+     * use the foreach notation: {for (Key key : st.keys())}.
+     * @return all keys in the symbol table as an {Iterable}
      */
     public Iterable<String> keys() {
         Queue<String> queue = new Queue<String>();
@@ -202,15 +215,16 @@ public class TST<Value> {
     }
 
     /**
-     * Returns all of the keys in the set that start with {@code prefix}.
+     * Returns all of the keys in the set that start with {prefix}.
      * @param prefix the prefix
-     * @return all of the keys in the set that start with {@code prefix},
+     * @return all of the keys in the set that start with {prefix},
      *     as an iterable
-     * @throws IllegalArgumentException if {@code prefix} is {@code null}
+     * @throws IllegalArgumentException if {prefix} is {null}
      */
     public Iterable<String> keysWithPrefix(final String prefix) {
         if (prefix == null) {
-            throw new IllegalArgumentException("calls keysWithPrefix() with null argument");
+            throw new IllegalArgumentException(
+                "calls keysWithPrefix() with null argument");
         }
         Queue<String> queue = new Queue<String>();
         Node<Value> x = get(root, prefix, 0);
@@ -223,10 +237,31 @@ public class TST<Value> {
         collect(x.mid, new StringBuilder(prefix), queue);
         return queue;
     }
+    /**
+     * Determines if it has prefix.
+     *
+     * @param      str   The string
+     *
+     * @return     True if has prefix, False otherwise.
+     */
+    public boolean hasPrefix(final String str) {
+        Node x = get(root, str, 0);
+        if (x == null) {
+            return false;
+        }
+        return true;
+    }
 
-    // all keys in subtrie rooted at x with given prefix
+    /**
+     * all keys in subtrie rooted at x with given prefix.
+     *
+     * @param      x       { parameter_description }
+     * @param      prefix  The prefix
+     * @param      queue   The queue
+     */
     private void collect(final Node<Value> x,
-        final StringBuilder prefix, final Queue<String> queue) {
+                         final StringBuilder prefix,
+                         final Queue<String> queue) {
         if (x == null) {
             return;
         }
@@ -241,10 +276,11 @@ public class TST<Value> {
 
 
     /**
-     * Returns all of the keys in the symbol table that match {@code pattern},
+     * Returns all of the keys in the symbol table that match {pattern},
      * where . symbol is treated as a wildcard character.
+     *
      * @param pattern the pattern
-     * @return all of the keys in the symbol table that match {@code pattern},
+     * @return all of the keys in the symbol table that match {pattern},
      *     as an iterable, where . is treated as a wildcard character.
      */
     public Iterable<String> keysThatMatch(final String pattern) {
@@ -252,8 +288,19 @@ public class TST<Value> {
         collect(root, new StringBuilder(), 0, pattern, queue);
         return queue;
     }
-
-    private void collect(Node<Value> x, StringBuilder prefix, int i, String pattern, Queue<String> queue) {
+    /**
+     * collect function.
+     *
+     * @param      x        { parameter_description }
+     * @param      prefix   The prefix
+     * @param      i        { parameter_description }
+     * @param      pattern  The pattern
+     * @param      queue    The queue
+     */
+    private void collect(final Node<Value> x,
+                         final StringBuilder prefix,
+                         final int i, final String pattern,
+                         final Queue<String> queue) {
         if (x == null) {
             return;
         }
@@ -266,7 +313,8 @@ public class TST<Value> {
                 queue.enqueue(prefix.toString() + x.c);
             }
             if (i < pattern.length() - 1) {
-                collect(x.mid, prefix.append(x.c), i + 1, pattern, queue);
+                collect(x.mid, prefix.append(x.c), i + 1,
+                        pattern, queue);
                 prefix.deleteCharAt(prefix.length() - 1);
             }
         }
@@ -275,18 +323,45 @@ public class TST<Value> {
         }
     }
 
-    public boolean hasPrefix(String prefix) {
-        Node<Value> prefixNode = get(root, prefix, 0);
-        if (prefixNode == null) {
-            return false;
-        }
-        if (prefixNode.val != null) {
-            return true;
-        }
-        if (prefixNode.left == null && prefixNode.mid == null
-                && prefixNode.right == null) {
-            return false;
-        }
-        return true;
-    }
+
+    // /**
+    //  * Unit tests the {@code TST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+
+    //     // build symbol table from standard input
+    //     TST<Integer> st = new TST<Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+
+    //     // print results
+    //     if (st.size() < 100) {
+    //         StdOut.println("keys(\"\"):");
+    //         for (String key : st.keys()) {
+    //             StdOut.println(key + " " + st.get(key));
+    //         }
+    //         StdOut.println();
+    //     }
+
+    //     StdOut.println("longestPrefixOf(\"shellsort\"):");
+    //     StdOut.println(st.longestPrefixOf("shellsort"));
+    //     StdOut.println();
+
+    //     StdOut.println("longestPrefixOf(\"shell\"):");
+    //     StdOut.println(st.longestPrefixOf("shell"));
+    //     StdOut.println();
+
+    //     StdOut.println("keysWithPrefix(\"shor\"):");
+    //     for (String s : st.keysWithPrefix("shor"))
+    //         StdOut.println(s);
+    //     StdOut.println();
+
+    //     StdOut.println("keysThatMatch(\".he.l.\"):");
+    //     for (String s : st.keysThatMatch(".he.l."))
+    //         StdOut.println(s);
+    // }
 }
