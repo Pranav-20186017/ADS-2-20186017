@@ -144,9 +144,17 @@ class T9 {
         terstr = new TST<>();
         for (String each : st.keys()) {
             terstr.put(each, st.get(each));
-        } 
+        }
     }
-    // return all possibilities(words), find top k with highest frequency.
+    /**
+     * Gets the suggestions.
+     *
+     * @param      words  The words
+     * @param      k      { parameter_description }
+     *
+     * @return     The suggestions.
+     */
+    //return all possibilities(words), find top k with highest frequency.
     public Iterable<String> getSuggestions(Iterable<String> words, int k) {
         // your code goes here
         MaxPQ<Integer> pq = new MaxPQ<>();
@@ -165,11 +173,25 @@ class T9 {
         Collections.sort(list);
         return list;
     }
+    /**
+     * Gets all words.
+     *
+     * @param      prefix  The prefix
+     *
+     * @return     All words.
+     */
     // get all the prefixes that match with given prefix.
     public Iterable<String> getAllWords(String prefix) {
         // your code goes here
         return terstr.keysWithPrefix(prefix);
     }
+    /**
+     * gives the list of potential words.
+     *
+     * @param      t9Signature  The t 9 signature
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<String> potentialWords(String t9Signature) {
         // your code goes here
         ArrayList<String> list = new ArrayList<>();
@@ -216,8 +238,15 @@ class T9 {
         } 
         return list;
     }
-    // final output
-    // Don't modify this method.
+    /**
+     * final output.
+     *
+     * @param      t9Signature  The t 9 signature
+     * @param      k            { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+
     public Iterable<String> t9(String t9Signature, int k) {
         return getSuggestions(potentialWords(t9Signature), k);
     }
