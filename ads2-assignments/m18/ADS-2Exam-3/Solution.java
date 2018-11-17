@@ -1,17 +1,25 @@
 import java.util.Scanner;
-
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-
-	// Don't modify this method.
-	public static void main(String[] args) {
+	private Solution() {
+		//unused.
+	}
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String cases = scan.nextLine();
 
 		switch (cases) {
 		case "loadDictionary":
 			// input000.txt and output000.txt
-			BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
+			String dir = "/Files/t9.csv";
+			BinarySearchST<String, Integer> hash = loadDictionary(dir);
 			while (scan.hasNextLine()) {
 				String key = scan.nextLine();
 				System.out.println(hash.get(key));
