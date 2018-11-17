@@ -98,7 +98,7 @@ final class Solution {
      *
      * @return     { array of strings}.
      */
-    public static String[] toReadFile(String file) {
+    public static String[] toReadFile(final String file) {
         In in = new In(file);
         return in.readAllStrings();
     }
@@ -117,7 +117,7 @@ final class Solution {
         for (int i = 0; i < t9d.length; i++) {
             String token = t9d[i].toLowerCase();
             if (st.contains(token)) {
-                st.put(token , st.get(token ) + 1);
+                st.put(token, st.get(token) + 1);
             } else {
                 st.put(token, 1);
             }
@@ -130,17 +130,19 @@ final class Solution {
  * Class for t 9.
  */
 class T9 {
-	/**
-	 * Constructs the object.
-	 */
-	private T9() {
-		//unused.
-	}
-    TST<Integer> terstr;
-    public T9(BinarySearchST<String, Integer> st) {
+    /**
+     * object for terenary search tries class.
+     */
+    private TST<Integer> terstr;
+    /**
+     * Constructs the object.
+     *
+     * @param      st    { parameter_description }
+     */
+    public T9(final BinarySearchST<String, Integer> st) {
         // your code goes here
         terstr = new TST<>();
-        for(String each : st.keys()) {
+        for (String each : st.keys()) {
             terstr.put(each, st.get(each));
         } 
     }
