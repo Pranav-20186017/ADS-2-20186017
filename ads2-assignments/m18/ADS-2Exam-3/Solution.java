@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -91,14 +91,25 @@ public class Solution {
 
         }
     }
-
-    // Don't modify this method.
+    /**
+     * method to read the csv file.
+     *
+     * @param      file  The file
+     *
+     * @return     { array of strings}.
+     */
     public static String[] toReadFile(String file) {
         In in = new In(file);
         return in.readAllStrings();
     }
-
-    public static BinarySearchST<String, Integer> loadDictionary(String file) {
+    /**
+     * Loads a dictionary.
+     *
+     * @param      file  The file
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static BinarySearchST<String, Integer> loadDictionary(final String file) {
         BinarySearchST<String, Integer>  st =
         new BinarySearchST<String, Integer>();
         // your code goes here
@@ -115,8 +126,16 @@ public class Solution {
     }
 
 }
-
+/**
+ * Class for t 9.
+ */
 class T9 {
+	/**
+	 * Constructs the object.
+	 */
+	private T9() {
+		//unused.
+	}
     TST<Integer> terstr;
     public T9(BinarySearchST<String, Integer> st) {
         // your code goes here
