@@ -151,13 +151,12 @@ class T9 {
     }
     public Iterable<String> potentialWords(String t9Signature) {
         // your code goes here
-        // String[] nums = t9Signature.split("");
         ArrayList<String> list = new ArrayList<>();
         for(String itr: terstr.keys()) {
             String[] token = itr.split("");
             String number = "";
             for(String ch : token){
-                if(ch.equals("a") || ch.equals("b") || ch.equals("c")) {
+                if(ch == "a" || ch.equals("b") || ch.equals("c")) {
                     number = number + "2";
                 }
                 if(ch.equals("d") || ch.equals("e") || ch.equals("f")) {

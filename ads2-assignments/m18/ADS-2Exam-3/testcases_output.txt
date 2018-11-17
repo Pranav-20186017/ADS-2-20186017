@@ -92,7 +92,7 @@ messagesome
 going
 ----------------------------------------
 
-########## Testcase 2: Passed ##########
+########## Testcase 2: Failed ##########
 Expected Output: 
 hello
 pizza
@@ -158,58 +158,31 @@ seeking
 
 Your Output: 
 hello
-pizza
-what
-sunday
-ball
-call
 involve
 finish
 gone
 good
 home
-battery
 friends
-watches
 morning
 tonight
 shop
 phne
-any
+shame
 bmw
+bowa
 box
 boy
 coz
-jay
-jaz
-kay
-law
-lay
-ammo
-das
-ear
-far
+shades
 send
 pocked
 pest
 rest
+wanna
 woo
-paying
-saying
-james
-lands
-hates
-casting
-packing
 peeps
-bam
-bao
-cam
-can
-abt
-act
-bat
-cat
+ccna
 mines
 liver
 lives
@@ -286,7 +259,7 @@ Your Output:
 Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
 	at MaxPQ.delMax(MaxPQ.java:174)
 	at T9.getSuggestions(Solution.java:137)
-	at T9.t9(Solution.java:194)
+	at T9.t9(Solution.java:193)
 	at Solution.main(Solution.java:83)
 ----------------------------------------
 
