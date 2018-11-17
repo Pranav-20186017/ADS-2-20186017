@@ -375,7 +375,41 @@ Starting audit...
 Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
-Checkstyle ends with 1 errors.
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:7: Class Solution should be declared as final. [FinalClass]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:26: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:95:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:95:39: Parameter file should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:100:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:100:66: Parameter file should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:101: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:107:29: ',' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:107:44: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:117: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:118:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:118:18: Variable 'terstr' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:119:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:119:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:119:15: Parameter st should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:122:12: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:124: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:128:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:128:41: Parameter prefix should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:133:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:133:44: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:139:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:139:44: Parameter words should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:139:68: Parameter k should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:143:12: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:146:12: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:146:20: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:148:16: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:149:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:159:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:159:32: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:159:52: Parameter k should be final. [FinalParameters]
+Audit done.
+Checkstyle ends with 33 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]
