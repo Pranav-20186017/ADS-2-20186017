@@ -1,8 +1,17 @@
 import java.util.Collections;
 import java.util.ArrayList;
+/**
+ * Class for t 9.
+ */
 class T9 {
+    /**
+     * Constructs the object.
+     */
+    private T9() {
+        //unused.
+    }
     TST<Integer> terstr;
-    public T9(BinarySearchST<String, Integer> st) {
+    public T9(final BinarySearchST<String, Integer> st) {
         // your code goes here
         terstr = new TST<>();
         for(String each : st.keys()) {
@@ -10,7 +19,7 @@ class T9 {
         } 
     }
     // return all possibilities(words), find top k with highest frequency.
-    public Iterable<String> getSuggestions(Iterable<String> words, int k) {
+    public Iterable<String> getSuggestions(final Iterable<String> words, final int k) {
         // your code goes here
         MaxPQ<Integer> pq = new MaxPQ<>();
         ArrayList<String> list = new ArrayList<>();
@@ -29,11 +38,11 @@ class T9 {
         return list;
     }
     // get all the prefixes that match with given prefix.
-    public Iterable<String> getAllWords(String prefix) {
+    public Iterable<String> getAllWords(final String prefix) {
         // your code goes here
         return terstr.keysWithPrefix(prefix);
     }
-    public Iterable<String> potentialWords(String t9Signature) {
+    public Iterable<String> potentialWords(final String t9Signature) {
         // your code goes here
         ArrayList<String> list = new ArrayList<>();
         for(String itr: terstr.keys()) {
@@ -81,7 +90,7 @@ class T9 {
     }
     // final output
     // Don't modify this method.
-    public Iterable<String> t9(String t9Signature, int k) {
+    public Iterable<String> t9(final String t9Signature, final int k) {
         return getSuggestions(potentialWords(t9Signature), k);
     }
 }
