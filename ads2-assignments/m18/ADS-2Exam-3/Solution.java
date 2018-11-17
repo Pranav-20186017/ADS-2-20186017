@@ -155,17 +155,18 @@ class T9 {
      * @return     The suggestions.
      */
     //return all possibilities(words), find top k with highest frequency.
-    public Iterable<String> getSuggestions(Iterable<String> words, int k) {
+    public Iterable<String> getSuggestions(final Iterable<String> words,
+        final int k) {
         // your code goes here
         MaxPQ<Integer> pq = new MaxPQ<>();
         ArrayList<String> list = new ArrayList<>();
-        for(String itr : words) {
+        for (String itr : words) {
             pq.insert(terstr.get(itr));
         }
-        for(int i =0; i < k; i++) {
+        for (int i = 0; i < k; i++) {
             int temp = pq.delMax();
-            for(String word : words) {
-                if(temp == terstr.get(word)) {
+            for (String word : words) {
+                if (temp == terstr.get(word)) {
                     list.add(word);
                 }
             }
@@ -181,7 +182,7 @@ class T9 {
      * @return     All words.
      */
     // get all the prefixes that match with given prefix.
-    public Iterable<String> getAllWords(String prefix) {
+    public Iterable<String> getAllWords(final String prefix) {
         // your code goes here
         return terstr.keysWithPrefix(prefix);
     }
@@ -192,47 +193,47 @@ class T9 {
      *
      * @return     { description_of_the_return_value }
      */
-    public Iterable<String> potentialWords(String t9Signature) {
+    public Iterable<String> potentialWords(final String t9Signature) {
         // your code goes here
         ArrayList<String> list = new ArrayList<>();
-        for(String itr: terstr.keys()) {
+        for (String itr: terstr.keys()) {
             String[] token = itr.split("");
             String number = "";
-            for(String ch : token){
-                if(ch.equals("a")
+            for (String ch : token) {
+                if (ch.equals("a")
                     || ch.equals("b") || ch.equals("c")) {
                     number = number + "2";
                 }
-                if(ch.equals("d")
+                if (ch.equals("d")
                     || ch.equals("e") || ch.equals("f")) {
                     number = number + "3";
                 }
-                if(ch.equals("g")
+                if (ch.equals("g")
                     || ch.equals("h") || ch.equals("i")) {
                     number = number + "4";
                 }
-                if(ch.equals("j")
+                if (ch.equals("j")
                     || ch.equals("k") || ch.equals("l")) {
                     number = number + "5";
                 }
-                if(ch.equals("m")
+                if (ch.equals("m")
                     || ch.equals("n") || ch.equals("o")) {
                     number = number + "6";
                 }
-                if(ch.equals("p")
+                if (ch.equals("p")
                     || ch.equals("q") || ch.equals("r") || ch.equals("s")) {
                     number = number + "7";
                 }
-                if(ch.equals("t")
+                if (ch.equals("t")
                     || ch.equals("u") || ch.equals("v")) {
                     number = number + "8";
                 }
-                if(ch.equals("w")
+                if (ch.equals("w")
                     || ch.equals("x") || ch.equals("y") || ch.equals("z")) {
                     number = number + "9";
                 }
             }
-            if(number.equals(t9Signature)) {
+            if (number.equals(t9Signature)) {
                 list.add(itr);
             }
         } 
@@ -247,7 +248,8 @@ class T9 {
      * @return     { description_of_the_return_value }
      */
 
-    public Iterable<String> t9(String t9Signature, int k) {
+    public Iterable<String> t9(final String t9Signature,
+        final int k) {
         return getSuggestions(potentialWords(t9Signature), k);
     }
 }
