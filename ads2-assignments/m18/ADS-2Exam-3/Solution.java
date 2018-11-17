@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 /**
  * Class for solution.
  */
@@ -136,9 +138,22 @@ class T9 {
     // return all possibilities(words), find top k with highest frequency.
     public Iterable<String> getSuggestions(Iterable<String> words, int k) {
         // your code goes here
-        return null;
-    }
-
+        ArrayList<String> list = new ArrayList<>();
+        MaxPQ<Integer> pq = new MaxPQ<>();
+        for(String each : words) {
+            pq.insert(terstr.get(each));
+        }
+        for(int i =0; i < k; i++) {
+            int temp = pq.delMax();
+            for(String word : words) {
+                if(temp == terstr.get(word)) {
+                    list.add(word);
+                }
+            }
+        }
+        Collections.sort(list);
+        return list;
+    }s
     // final output
     // Don't modify this method.
     public Iterable<String> t9(String t9Signature, int k) {
