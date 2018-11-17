@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.ArrayList;
 /**
  * Class for solution.
  */
@@ -23,7 +23,8 @@ public class Solution {
         switch (cases) {
         case "loadDictionary":
             // input000.txt and output000.txt
-            BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
+            String dir = "/Files/t9.csv";
+            BinarySearchST<String, Integer> hash = loadDictionary(dir);
             while (scan.hasNextLine()) {
                 String key = scan.nextLine();
                 System.out.println(hash.get(key));
@@ -98,7 +99,8 @@ public class Solution {
     }
 
     public static BinarySearchST<String, Integer> loadDictionary(String file) {
-        BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
+        BinarySearchST<String, Integer>  st =
+        new BinarySearchST<String, Integer>();
         // your code goes here
         String[] t9d = toReadFile(file);
         for (int i = 0; i < t9d.length; i++) {
@@ -123,7 +125,6 @@ class T9 {
             terstr.put(each, st.get(each));
         } 
     }
-
     // get all the prefixes that match with given prefix.
     public Iterable<String> getAllWords(String prefix) {
         // your code goes here
