@@ -1,3 +1,8 @@
+/**
+ * Class for tst.
+ *
+ * @param      <Value>  The value
+ */
 public class TST<Value> {
     /**
      * size.
@@ -48,7 +53,7 @@ public class TST<Value> {
      *     {@code false} otherwise
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public boolean contains(String key) {
+    public boolean contains(final String key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to contains() is null");
         }
@@ -62,13 +67,17 @@ public class TST<Value> {
      *     and {@code null} if the key is not in the symbol table
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public Value get(String key) {
+    public Value get(final String key) {
         if (key == null) {
             throw new IllegalArgumentException("calls get() with null argument");
         }
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.length() == 0) {
+            throw new IllegalArgumentException("key must have length >= 1");
+        }
         Node<Value> x = get(root, key, 0);
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         return x.val;
     }
     /**
@@ -81,13 +90,25 @@ public class TST<Value> {
      * @return     { description_of_the_return_value }
      */
     private Node<Value> get(Node<Value> x, String key, int d) {
-        if (x == null) return null;
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (x == null) {
+            return null;
+        }
+        if (key.length() == 0) {
+            throw new IllegalArgumentException("key must have length >= 1");
+        }
         char c = key.charAt(d);
-        if      (c < x.c)              return get(x.left,  key, d);
-        else if (c > x.c)              return get(x.right, key, d);
-        else if (d < key.length() - 1) return get(x.mid,   key, d + 1);
-        else                           return x;
+        if (c < x.c) {
+            return get(x.left,  key, d);
+        }
+        else if (c > x.c) {
+            return get(x.right, key, d);
+        }
+        else if (d < key.length() - 1) {
+            return get(x.mid,   key, d + 1);
+        }
+        else {
+            return x;
+        }
     }
 
     /**
@@ -102,7 +123,9 @@ public class TST<Value> {
         if (key == null) {
             throw new IllegalArgumentException("calls put() with null key");
         }
-        if (!contains(key)) n++;
+        if (!contains(key)) {
+            n++;
+        }
         root = put(root, key, val, 0);
     }
 
@@ -138,7 +161,9 @@ public class TST<Value> {
         if (query == null) {
             throw new IllegalArgumentException("calls longestPrefixOf() with null argument");
         }
-        if (query.length() == 0) return null;
+        if (query.length() == 0) {
+            return null;
+        }
         int length = 0;
         Node<Value> x = root;
         int i = 0;
@@ -178,20 +203,25 @@ public class TST<Value> {
      *     as an iterable
      * @throws IllegalArgumentException if {@code prefix} is {@code null}
      */
-    public Iterable<String> keysWithPrefix(String prefix) {
+    public Iterable<String> keysWithPrefix(final String prefix) {
         if (prefix == null) {
             throw new IllegalArgumentException("calls keysWithPrefix() with null argument");
         }
         Queue<String> queue = new Queue<String>();
         Node<Value> x = get(root, prefix, 0);
-        if (x == null) return queue;
-        if (x.val != null) queue.enqueue(prefix);
+        if (x == null) {
+            return queue;
+        }
+        if (x.val != null) {
+            queue.enqueue(prefix);
+        }
         collect(x.mid, new StringBuilder(prefix), queue);
         return queue;
     }
 
     // all keys in subtrie rooted at x with given prefix
-    private void collect(Node<Value> x, StringBuilder prefix, Queue<String> queue) {
+    private void collect(final Node<Value> x,
+        final StringBuilder prefix, final Queue<String> queue) {
         if (x == null) {
             return;
         }
@@ -219,7 +249,9 @@ public class TST<Value> {
     }
 
     private void collect(Node<Value> x, StringBuilder prefix, int i, String pattern, Queue<String> queue) {
-        if (x == null) return;
+        if (x == null) {
+            return;
+        }
         char c = pattern.charAt(i);
         if (c == '.' || c < x.c) {
             collect(x.left, prefix, i, pattern, queue);
