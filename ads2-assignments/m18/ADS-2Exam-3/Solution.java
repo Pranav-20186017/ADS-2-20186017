@@ -97,11 +97,11 @@ public class Solution {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
 		String[] t9d = toReadFile(file);
 		for (int i = 0; i < t9d.length; i++) {
-			String word = t9d[i].toLowerCase();
-			if (st.contains(word)) {
-				st.put(word, st.get(word) + 1);
+			String token = t9d[i].toLowerCase();
+			if (st.contains(token)) {
+				st.put(token, st.get(token) + 1);
 			} else {
-				st.put(word, 1);
+				st.put(token, 1);
 			}
 		}
 		return st;
