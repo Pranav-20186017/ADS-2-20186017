@@ -234,11 +234,8 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:112: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:142:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\Solution.java:239: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-2-20186017\ads2-assignments\m18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]

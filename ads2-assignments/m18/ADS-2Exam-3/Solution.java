@@ -109,7 +109,8 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static BinarySearchST<String, Integer> loadDictionary(final String file) {
+    public static
+    BinarySearchST<String, Integer> loadDictionary(final String file) {
         BinarySearchST<String, Integer>  st =
         new BinarySearchST<String, Integer>();
         // your code goes here
@@ -139,7 +140,7 @@ class T9 {
      *
      * @param      st    { parameter_description }
      */
-    public T9(final BinarySearchST<String, Integer> st) {
+    protected T9(final BinarySearchST<String, Integer> st) {
         // your code goes here
         terstr = new TST<>();
         for (String each : st.keys()) {
@@ -236,7 +237,7 @@ class T9 {
             if (number.equals(t9Signature)) {
                 list.add(itr);
             }
-        } 
+        }
         return list;
     }
     /**
