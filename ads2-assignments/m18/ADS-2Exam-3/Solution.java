@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Collections;
-import java.util.ArrayList;
+import java.util.TreeSet;
 /**
  * Class for solution.
  */
@@ -160,7 +160,7 @@ class T9 {
         final int k) {
         // your code goes here
         MaxPQ<Integer> pq = new MaxPQ<>();
-        ArrayList<String> list = new ArrayList<>();
+        TreeSet<String> list = new TreeSet<>();
         for (String itr : words) {
             pq.insert(terstr.get(itr));
         }
@@ -172,7 +172,6 @@ class T9 {
                 }
             }
         }
-        Collections.sort(list);
         return list;
     }
     /**
@@ -196,7 +195,7 @@ class T9 {
      */
     public Iterable<String> potentialWords(final String t9Signature) {
         // your code goes here
-        ArrayList<String> list = new ArrayList<>();
+        TreeSet<String> list = new TreeSet<>();
         for (String itr: terstr.keys()) {
             String[] token = itr.split("");
             String number = "";
