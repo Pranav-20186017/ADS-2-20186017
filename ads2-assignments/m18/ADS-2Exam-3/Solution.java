@@ -125,17 +125,6 @@ class T9 {
             terstr.put(each, st.get(each));
         } 
     }
-    // get all the prefixes that match with given prefix.
-    public Iterable<String> getAllWords(String prefix) {
-        // your code goes here
-        return terstr.keysWithPrefix(prefix);
-    }
-
-    public Iterable<String> potentialWords(String t9Signature) {
-        // your code goes here
-        return null;
-    }
-
     // return all possibilities(words), find top k with highest frequency.
     public Iterable<String> getSuggestions(Iterable<String> words, int k) {
         // your code goes here
@@ -154,6 +143,16 @@ class T9 {
         }
         Collections.sort(list);
         return list;
+    }
+    // get all the prefixes that match with given prefix.
+    public Iterable<String> getAllWords(String prefix) {
+        // your code goes here
+        return terstr.keysWithPrefix(prefix);
+    }
+
+    public Iterable<String> potentialWords(String t9Signature) {
+        // your code goes here
+        return null;
     }
     // final output
     // Don't modify this method.

@@ -225,8 +225,8 @@ keep
 
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at T9.getSuggestions(Solution.java:144)
-	at T9.t9(Solution.java:161)
+	at T9.getSuggestions(Solution.java:133)
+	at T9.t9(Solution.java:160)
 	at Solution.main(Solution.java:83)
 ----------------------------------------
 
