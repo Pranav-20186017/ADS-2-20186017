@@ -1,0 +1,5 @@
+Activity 7:
+
+Exactly four consecutive A s [A]{4}
+No more than four consecutive A s [A]{0,4}
+At least one occurrence of four consecutive A s ([A]{0,4})+
