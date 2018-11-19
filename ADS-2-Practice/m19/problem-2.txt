@@ -1,0 +1,4 @@
+.* Description: There can be any characters.
+A.*A | A   Description: There can be any characters between A and A and should end with A.
+.*ABBABBA.* Description: There should be a substring ABBABBA in between characters.
+.* A.*A.*A.*A.*  Description: There should be four A character in between characters.
