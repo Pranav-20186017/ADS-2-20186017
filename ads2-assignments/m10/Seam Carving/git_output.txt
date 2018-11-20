@@ -1,0 +1,17 @@
+warning: LF will be replaced by CRLF in ads2-assignments/m10/Seam Carving/PrintSeams.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m10/Seam Carving/SCUtility.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ads2-assignments/m10/Seam Carving/SeamCarver.java.
+The file will have its original line endings in your working directory.
+[master e9b3cd3] "ads2_m10_a1_1: 9/9 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 14 files changed, 943 insertions(+), 1126 deletions(-)
+ create mode 100644 ads2-assignments/m10/Seam Carving/.DS_Store
+ rewrite ads2-assignments/m10/Seam Carving/SeamCarver.class (100%)
+ rewrite ads2-assignments/m10/Seam Carving/SeamCarver.java (88%)
+ rewrite ads2-assignments/m10/Seam Carving/Solution.class (87%)
+ rewrite ads2-assignments/m10/Seam Carving/Solution.java (67%)
+ rewrite ads2-assignments/m10/Seam Carving/StdOut.java (78%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   7e782f8..e9b3cd3  master -> master

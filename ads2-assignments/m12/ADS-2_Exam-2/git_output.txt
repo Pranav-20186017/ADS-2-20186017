@@ -1,0 +1,9 @@
+warning: LF will be replaced by CRLF in ads2-assignments/m12/ADS-2_Exam-2/EdgeWeightedGraph.java.
+The file will have its original line endings in your working directory.
+[master 7ea344a] "ads2_m12_a1_1: 6/6 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 4 files changed, 280 insertions(+), 255 deletions(-)
+ rewrite ads2-assignments/m12/ADS-2_Exam-2/EdgeWeightedGraph.class (99%)
+ rewrite ads2-assignments/m12/ADS-2_Exam-2/EdgeWeightedGraph.java (66%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   71b4620..7ea344a  master -> master

@@ -1,0 +1,6 @@
+[master de60896] "ads2_m4_a1_1: 15/15 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rewrite ads2-assignments/m4/Code Camp - WordNet/WordNet/result/score.json (88%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-2-20186017.git
+   a3e493e..de60896  master -> master
