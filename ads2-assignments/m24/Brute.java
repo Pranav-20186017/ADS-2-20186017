@@ -31,15 +31,15 @@ public class Brute {
         int offset2a = search2(pat, txt);
         // from brute force search method 2a
         if (offset2a != txt.length()) {
-        	// System.out.println("Pattern Found");
+        	System.out.println("Pattern Found");
         for (int i = offset2a; i < offset2a + pat.length(); i++) {
-        	// System.out.print(txt.charAt(i));
+        	System.out.print(txt.charAt(i));
         }
        } else {
-       	// System.out.println("Pattern Not Found");
+       	System.out.println("Pattern Not Found");
        }
        long endTime = System.currentTimeMillis();
-       // System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
+       System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
        System.out.println(endTime - startTime);
     }
 }

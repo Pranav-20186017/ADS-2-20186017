@@ -95,13 +95,13 @@ public class BoyerMoore {
         }
         return n;                       // not found
     }
-    /**
-     * Takes a pattern string and an input string as command-line arguments;
-     * searches for the pattern string in the text string; and prints
-     * the first occurrence of the pattern string in the text string.
-     *
-     * @param args the command-line arguments
-     */
+   	/**
+   	 * main method.
+   	 *
+   	 * @param      args         The arguments
+   	 *
+   	 * @throws     IOException  { exception_description }
+   	 */
     public static void main(String[] args) throws IOException {
     	long startTime = System.currentTimeMillis();
         String pat = new String("It is a far, far better thing that I do, than I have ever done");
@@ -109,15 +109,15 @@ public class BoyerMoore {
         BoyerMoore boyermoore1 = new BoyerMoore(pat);
         int offset1 = boyermoore1.search(txt);
         if (offset1 != txt.length()) {
-        	// System.out.println("Pattern Found!!!");
+        	System.out.println("Pattern Found!!!");
         for (int i = offset1; i < offset1 + pat.length(); i++) {
-        	// System.out.print(txt.charAt(i));
+        	System.out.print(txt.charAt(i));
         }
     } else {
-    	// System.out.println("Pattern Not Found");
+    	System.out.println("Pattern Not Found");
     }
     long endTime = System.currentTimeMillis();
-    // System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
+    System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
     System.out.println(endTime - startTime);
   }
 }

@@ -107,55 +107,18 @@ public class KMP {
         long startTime = System.currentTimeMillis();
         String pat = new String("It is a far, far better thing that I do, than I have ever done");
         String txt = new String(Files.readAllBytes(Paths.get("tale.txt")));
-        // char[] pattern = pat.toCharArray();
-        // char[] text    = txt.toCharArray();
-
         KMP kmp1 = new KMP(pat);
         int offset1 = kmp1.search(txt);
-
-        // KMP kmp2 = new KMP(pattern, 256);
-        // int offset2 = kmp2.search(text);
-
-        // // print results
-        // StdOut.println("text:    " + txt);
 		if (offset1 != txt.length()) {
-        	// System.out.println("Pattern Found!!!");
+        	System.out.println("Pattern Found!!!");
         for (int i = offset1; i < offset1 + pat.length(); i++) {
-        	// System.out.print(txt.charAt(i));
+        	System.out.print(txt.charAt(i));
         }
     } else {
-    	// System.out.println("Pattern Not Found");
+    	System.out.println("Pattern Not Found");
     }
     long endTime = System.currentTimeMillis();
-    // System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
+    System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
     System.out.println(endTime - startTime);
-        // StdOut.print("pattern: ");
-        // for (int i = 0; i < offset2; i++)
-        //     StdOut.print(" ");
-        // StdOut.println(pat);
     }
 }
-
-/******************************************************************************
- *  Copyright 2002-2016, Robert Sedgewick and Kevin Wayne.
- *
- *  This file is part of algs4.jar, which accompanies the textbook
- *
- *      Algorithms, 4th edition by Robert Sedgewick and Kevin Wayne,
- *      Addison-Wesley Professional, 2011, ISBN 0-321-57351-X.
- *      http://algs4.cs.princeton.edu
- *
- *
- *  algs4.jar is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  algs4.jar is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with algs4.jar.  If not, see http://www.gnu.org/licenses.
- ******************************************************************************/

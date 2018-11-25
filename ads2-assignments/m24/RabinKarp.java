@@ -116,16 +116,15 @@ public class RabinKarp {
         RabinKarp searcher = new RabinKarp(pat);
         int offset = searcher.search(txt);
         if(offset != txt.length()) {
-        	// System.out.println("Pattern found!!!");
-        	// System.out.println("Start index: " + offset + " " +"Stop Index: " + offset+pat.length());
+        	System.out.println("Pattern found!!!");
         for (int i = offset; i < offset+pat.length(); i++) {
-        	// System.out.print(txt.charAt(i));
+        	System.out.print(txt.charAt(i));
         }
       } else {
       	System.out.println("Pattern not found");
       }
       long endTime = System.currentTimeMillis();
-        // System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
+        System.out.println("\nIt took " + (endTime - startTime) + " milliseconds");
       System.out.println(endTime - startTime);
     }
 }
